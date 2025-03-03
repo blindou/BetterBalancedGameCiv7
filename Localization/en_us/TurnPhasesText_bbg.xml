@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<EnglishText>
+		<Row Tag="LOC_GAME_TURNPHASE_TYPE">
+			<Text>Advanced Turn Settings:</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS">
+			<Text>Simultaneous (default)</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_DESC">
+			<Text>Default setting for standard simultaneous turns</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FASTER">
+			<Text>Simultaneous, Faster.</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_DYNAMIC">
+			<Text>Hybrid</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT">
+			<Text>Simultaneous +2s wait (experimental)</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT_FASTER">
+			<Text>Simultaneous, Faster +2s wait (experimental)</Text>
+		</Row>
+
+
+		<Row Tag="LOC_GAME_TURNPHASE_DESC">
+			<Text>Simultaneous- Default setting for standard simultaneous turns.[n] [n]
+
+				Hybrid- Simultaneous at peace, sequential at war.[n] [n]
+
+				Simultaneous +2s wait (experimental)- The turn occurs in 3 phases: 2s wait, simultaneous turn, 2s wait. This MIGHT reduce desyncs by preventing players from moving while someone else is in rollover (first moves or last moves). You will have to manually end turn to progress through the waits turn 1. Broken when not set to Dynamic Turn Timer.[n] [n]
+
+				Faster denotes a faster dynamic turn timer.
+			</Text>
+		</Row>
+	</EnglishText>
+</Database>
