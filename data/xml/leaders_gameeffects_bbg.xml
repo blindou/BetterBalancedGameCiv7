@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameEffects xmlns="GameEffects">
+	<Modifier id="PACHACUTI_MOUNTAIN_PRODUCTION_MOD" collection="COLLECTION_PLAYER_CITIES" effect="EFFECT_CITY_ACTIVATE_CONSTRUCTIBLE_ADJACENCY">
+		<Argument name="ConstructibleAdjacency">PachacutiMountainProduction</Argument>
+		<Argument name="Tooltip">LOC_TRAIT_LEADER_PACHACUTI_ABILITY_NAME</Argument>
+	</Modifier>
+
+	<Modifier id="NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" collection="COLLECTION_PLAYER_UNITS" effect="EFFECT_UNIT_ADJUST_ABILITY">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_UNIT_TAG_MATCHES">
+				<Argument name="Tag">UNIT_CLASS_SIEGE</Argument>
+			</Requirement>
+		</SubjectRequirements>
+		<Argument name="AbilityType">ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH</Argument>
+	</Modifier>
+    <Modifier id="NAPOLEON_SIEGE_COMBAT_STRENGTH" collection="COLLECTION_UNIT_COMBAT" effect="EFFECT_ADJUST_UNIT_STRENGTH_MODIFIER">
+        <Argument name="Amount">5</Argument>
+        <String context="Preview">LOC_TRAIT_LEADER_NAPOLEON_ALT_SIEGE_COMBAT_STR</String>
+    </Modifier>
+</GameEffects> 

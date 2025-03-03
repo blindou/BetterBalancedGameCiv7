@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <Types>
+        <Row Type="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" Kind="KIND_ABILITY"/>
+        <Row Type="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" Kind="KIND_ABILITY"/>
+    </Types>
+    <UnitClass_Abilities>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" UnitClassType="UNIT_CLASS_INFANTRY"/>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" UnitClassType="UNIT_CLASS_INFANTRY"/>
+    </UnitClass_Abilities>
+    <UnitAbilities>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" 
+             Inactive="true"
+             Name="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_NAME" 
+             Description="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_DESCRIPTION"/>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" 
+             Inactive="true"
+             Name="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_NAME" 
+             Description="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_DESCRIPTION"/>
+    </UnitAbilities>
+    <UnitAbilityModifiers>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" 
+             ModifierId="FRIEDRICH_SCIENCE_INFANTRY_COMBAT_STRENGTH"/>
+        <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" 
+             ModifierId="FRIEDRICH_CULTURAL_INFANTRY_COMBAT_STRENGTH"/>
+    </UnitAbilityModifiers>
+</Database>

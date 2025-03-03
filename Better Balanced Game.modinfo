@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="better_balance_game" version="1"
+	xmlns="ModInfo">
+	<Properties>
+		<Name>Better Balanced Game</Name>
+		<Description>Bringing the BBG mod over to civilization 7 to better balanced the base game</Description>
+		<Authors>Khakis7</Authors>
+		<Package>Mod</Package>
+	</Properties>
+	<Dependencies>
+		<Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME"/>
+	</Dependencies>
+	<ActionCriteria>
+		<Criteria id="antiquity-age-current">
+			<AgeInUse>AGE_ANTIQUITY</AgeInUse>
+		</Criteria>
+		<Criteria id="exploration-age-current">
+			<AgeInUse>AGE_EXPLORATION</AgeInUse>
+		</Criteria>
+		<Criteria id="modern-age-current">
+			<AgeInUse>AGE_MODERN</AgeInUse>
+		</Criteria>
+		<Criteria id="exploration-age-persist" any="true">
+			<AgeInUse>AGE_EXPLORATION</AgeInUse>
+			<AgeInUse>AGE_MODERN</AgeInUse>
+		</Criteria>
+		<Criteria id="always">
+			<AlwaysMet></AlwaysMet>
+		</Criteria>
+	</ActionCriteria>
+	<ActionGroups>
+		<ActionGroup id="bbg-antiquity-age-changes" scope="game" criteria="antiquity-age-current">
+			<Properties>
+				<LoadOrder>10</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateText>
+					<Item>Localization/BBG_Antiquity_LOC.sql</Item>
+				</UpdateText>
+				<UpdateDatabase>
+					<Item>data/BBG_Antiquity.sql</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+		<ActionGroup id="bbg-antiquity-persistent-changes" scope="game" criteria="always">
+			<Properties>
+				<LoadOrder>11</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateText>
+					<Item>Localization/BBG_AntiquityPersistent_LOC.sql</Item>
+				</UpdateText>
+				<UpdateDatabase>
+					<Item>data/BBG_AntiquityPersistent.sql</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+		<ActionGroup id="bbg-antiquity-age-loc-changes" scope="shell" criteria="always">
+			<Properties>
+				<LoadOrder>12</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateText>
+					<Item>Localization/BBG_Antiquity_LOC.sql</Item>
+				</UpdateText>
+				<UpdateText>
+					<Item>Localization/BBG_AntiquityPersistent_LOC.sql</Item>
+				</UpdateText>
+			</Actions>
+		</ActionGroup>
+		<ActionGroup id="bbg-leader-changes" scope="game" criteria="always">
+			<Properties>
+				<LoadOrder>13</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateDatabase>
+					<Item>data/xml/leaders_bbg.xml</Item>
+					<Item>data/xml/leaders_gameeffects_bbg.xml</Item>
+					<Item>data/xml/constructibles_bbg.xml</Item>
+					<Item>data/xml/units_bbg.xml</Item>
+					<Item>data/xml/units_gameeffects_bbg.xml</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+	</ActionGroups>
+</Mod>

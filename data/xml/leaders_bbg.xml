@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <TraitModifiers>
+        <Row TraitType="TRAIT_LEADER_PACHACUTI_ABILITY" ModifierId="PACHACUTI_MOUNTAIN_PRODUCTION_MOD"/>
+		<Row TraitType="TRAIT_LEADER_NAPOLEON_ALT_ABILITY" ModifierId="NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH"/>
+    </TraitModifiers>
+
+	
+    <Types>
+        <Row Type="ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" Kind="KIND_ABILITY"/>
+    </Types>
+    <UnitClass_Abilities>
+        <Row UnitAbilityType="ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" UnitClassType="UNIT_CLASS_SIEGE"/>
+    </UnitClass_Abilities>
+    <UnitAbilities>
+        <Row UnitAbilityType="ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" 
+             Inactive="true"
+             Name="LOC_ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH_NAME" 
+             Description="LOC_ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH_DESCRIPTION"/>
+    </UnitAbilities>
+    <UnitAbilityModifiers>
+        <Row UnitAbilityType="ABILITY_NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" 
+             ModifierId="NAPOLEON_SIEGE_COMBAT_STRENGTH"/>
+    </UnitAbilityModifiers>
+</Database>
