@@ -48,7 +48,7 @@
 				<UpdateDatabase>
 					<Item>config/config_bbg.xml</Item>
 					<Item>config/SetupParameters_bbg.xml</Item>
-					<Item>data/xml/TurnPhases_bbg.xml</Item>
+
 				</UpdateDatabase>
 				<UpdateText>
 					<!-- Can do it with sql, but this is lower effort -->
