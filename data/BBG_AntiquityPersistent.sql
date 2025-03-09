@@ -88,12 +88,39 @@
 	SET	Value = 75
 	WHERE ModifierId = 'ISABELLA_MOD_DOUBLE_NATURAL_WONDERS_ABILITY' and name = 'Percent';
 --========================================================================================================================
+
+--========================================================================================================================
+--========================================================================================================================	
+-- War Support
+-- Cities receive -1 happiness per negative war support (from -3) 
+--========================================================================================================================	
+	UPDATE WarWearinessEffects
+	SET	YieldReductionPerLevel = 1
+	WHERE WarWearinessType = 'WAR_WEARINESS_FOUNDED_SELF';
+
+	UPDATE WarWearinessEffects
+	SET	YieldReductionPerLevel = 1
+	WHERE WarWearinessType = 'WAR_WEARINESS_FOUNDED_OTHER';
+
+	UPDATE WarWearinessEffects
+	SET	YieldReductionPerLevel = 1
+	WHERE WarWearinessType = 'WAR_WEARINESS_FOUNDED_WAR_OPPONENT';
+--========================================================================================================================
+
+--========================================================================================================================
+--========================================================================================================================	
+-- Diplomacy
+-- Steal Technology Diplomatic action now costs 60 influence (from 40)
+--========================================================================================================================	
+	UPDATE DiplomaticActionInfluenceCosts
+	SET	InfCostHostile = 150, InfCostUnfriendly = 150, InfCostNeutral = 150, InfCostFriendly = 150, InfCostHelpful = 150
+	WHERE DiplomacyActionType = 'DIPLOMACY_ACTION_ESPIONAGE_STEAL_TECH';
 --========================================================================================================================
 
 --========================================================================================================================	
 -- Mementos
+-- Update Lydian Coin gold per age from 100 to 50
 --========================================================================================================================	
-	-- Update Lydian Coin gold per age from 100 to 50
 	UPDATE ModifierArguments 
 	SET Value = '50'
 	WHERE ModifierId = 'MEMENTO_FOUNDATION_LYDIAN_LION_MODIFIER' and name = 'Amount';

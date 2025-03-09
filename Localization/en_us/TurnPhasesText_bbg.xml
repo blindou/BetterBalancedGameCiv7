@@ -12,6 +12,27 @@
 			<Text>Default setting for standard simultaneous turns</Text>
 		</Row>
 
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST">
+			<Text>Fast Dynamic Timer</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC">
+			<Text>Fast dynamic timer (15s base + 5s per city + 1s per unit)</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL">
+			<Text>Normal Dynamic Timer</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC">
+			<Text>Normal dynamic timer (20s base + 5s per city + 3s per unit)</Text>
+		</Row>
+
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT">
+			<Text>Normal Dynamic Timer +Wait</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC">
+			<Text>Normal dynamic timer with 1s pause before and after turn</Text>
+		</Row>
+
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FASTER">
 			<Text>Simultaneous, Faster.</Text>
 		</Row>
@@ -28,16 +49,21 @@
 			<Text>Simultaneous, Faster +2s wait (experimental)</Text>
 		</Row>
 
-
 		<Row Tag="LOC_GAME_TURNPHASE_DESC">
 			<Text>Simultaneous- Default setting for standard simultaneous turns.[n] [n]
 
 				Hybrid- Simultaneous at peace, sequential at war.[n] [n]
 
-				Simultaneous +2s wait (experimental)- The turn occurs in 3 phases: 2s wait, simultaneous turn, 2s wait. This MIGHT reduce desyncs by preventing players from moving while someone else is in rollover (first moves or last moves). You will have to manually end turn to progress through the waits turn 1. Broken when not set to Dynamic Turn Timer.[n] [n]
+				Fast Dynamic Timer- Players take turns simultaneously with a faster dynamic timer (15s base + 5s per city + 1s per unit).[n] [n]
 
-				Faster denotes a faster dynamic turn timer.
+				Normal Dynamic Timer- Players take turns simultaneously with a standard dynamic timer (20s base + 5s per city + 3s per unit).[n] [n]
+
+				Normal Dynamic Timer +Wait- Same as Normal Dynamic Timer but includes a 1-second pause before and after each turn. This may help reduce desyncs.[n] [n]
 			</Text>
+		</Row>
+		
+		<Row Tag="LOC_WAIT_PHASE">
+			<Text>Pause</Text>
 		</Row>
 	</EnglishText>
 </Database>

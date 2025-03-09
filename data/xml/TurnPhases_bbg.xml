@@ -1,61 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Database>
 	<Types>
-		<!-- 
-			Create the types to hold wait stage of the +wait turn types
-
-			Turn 'modes' are defined elsewhere, I found them named in the default SetupParameters.xml but not where they are fleshed out.
-
-			The seperation between turn timer specification and turn phase specification is blurry. Selecting a standard turn timer will set all phases of a multi-phase turn type to that length. I specify a shorter dynamic timer, and use it in a turn phase type to give shorter dynamic turns. This does make the options a bit confusing.
-		-->
+		<!-- Create types for the new turn segments and phases -->
 		<Row Type="TURNPHASE_SIMULTANEOUS_WAIT"	Kind="KIND_TURNPHASE"/>
-		<!--<REPLACE Type="TURNMODE_SIMULTANEOUS_WAIT"	KIND="KIND_TURNMODE"/>-->
-		<Row Type="TURNSEG_WAIT"				KIND="KIND_TURNSEGMENT"/>
-
-		<!--
-		<Row Type="TURNMODE_SIMULTANEOUS_FASTER"         Kind="KIND_TURNMODE"/>
-		-->
-	</Types>
-	<!-- 
-		TurnSegment Attributes
+		<Row Type="TURNSEG_WAIT" Kind="KIND_TURNSEGMENT"/>
 		
-		Name						Displayed Name
-		Sound						Sound that is played at the beginning of the time segment.
-		AllowStrategicCommands		Allow strategic actions and notifications during the turn segment. A strategic action covers everything not-unit related.
-		AllowTacticalCommands		Allow tactical actions and notifications during the turn segment. Tactical actions consist of actions related to unit movement and actions.
-		AllowTurnUnready			Allow players to unready their turns during this time segment. Defaults to true.
-		TimeLimit_Base				Defines the minimum time limit of the turn segment (in seconds).  The other timelimit components are added on top of this value.
-		TimeLimit_PerCity			Defines the additional time limit provided per city (in seconds).  This is calculated globally for everyone based on the civ with the most cities.
-		TimeLimit_PerUnit			Defines the additional time limit provided per unit (in seconds).  This is calculated globally for everyone based on the civ with the most units.
-	-->
+		<!-- New turn segment types for the different dynamic timers -->
+		<Row Type="TURNSEG_SINGLEPHASE_FAST" Kind="KIND_TURNSEGMENT"/>
+		<Row Type="TURNSEG_SINGLEPHASE_NORMAL" Kind="KIND_TURNSEGMENT"/>
+		
+		<!-- New turn phase types -->
+		<Row Type="TURNPHASE_SIMULTANEOUS_FAST" Kind="KIND_TURNPHASE"/>
+		<Row Type="TURNPHASE_SIMULTANEOUS_NORMAL" Kind="KIND_TURNPHASE"/>
+		<Row Type="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Kind="KIND_TURNPHASE"/>
+	</Types>
+	
+	<!-- Define the turn segments with the specific time parameters -->
 	<TurnSegments>
-		<!-- 
-			Custom turn segments. 1 or more segments make up a turn.
-			Defaults specified in
-			Base\modules\core\data\TurnPhases.xml
-		-->
-		<Row TurnSegmentType="TURNSEG_WAIT"	NAME="LOC_WAIT_PHASE"		Sound=""	AllowStrategicCommands="false"  AllowTacticalCommands="false"	TimeLimit_Base ="3"  TimeLimit_PerCity="0"  TimeLimit_PerUnit="0"/>
-
-		<Row TurnSegmentType="TURNSEG_SINGLEPHASE_FASTER"	Name=""							Sound="Play_MP_Strategic_Turn_Start"		AllowStrategicCommands="true"   AllowTacticalCommands="true"	TimeLimit_Base ="20"  TimeLimit_PerCity="5"  TimeLimit_PerUnit="3"/>
+		<!-- Wait segment with 1 second duration -->
+		<Row TurnSegmentType="TURNSEG_WAIT" Name="LOC_WAIT_PHASE" Sound="" AllowStrategicCommands="false" AllowTacticalCommands="false" AllowTurnUnready="false" TimeLimit_Base="1" TimeLimit_PerCity="0" TimeLimit_PerUnit="0"/>
+		
+		<!-- Fast timer: 15 seconds base, 5 seconds per city, 1 second per unit -->
+		<Row TurnSegmentType="TURNSEG_SINGLEPHASE_FAST" Name="" Sound="Play_MP_Strategic_Turn_Start" AllowStrategicCommands="true" AllowTacticalCommands="true" TimeLimit_Base="15" TimeLimit_PerCity="5" TimeLimit_PerUnit="1"/>
+		
+		<!-- Normal timer: 20 seconds base, 5 seconds per city, 3 seconds per unit -->
+		<Row TurnSegmentType="TURNSEG_SINGLEPHASE_NORMAL" Name="" Sound="Play_MP_Strategic_Turn_Start" AllowStrategicCommands="true" AllowTacticalCommands="true" TimeLimit_Base="20" TimeLimit_PerCity="5" TimeLimit_PerUnit="3"/>
 	</TurnSegments>
 	
-	
+	<!-- Define the turn phases that combine the segments -->
 	<TurnPhases>
-		<!-- 
-			Custom turn segments. 1 or more segments make up a turn.
-			Defaults specified in
-			Base\modules\core\data\TurnPhases.xml
-		-->
-
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_FASTER" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_SINGLEPHASE_FASTER"/>
-
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_WAIT"/>
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT" PhaseOrder="1" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_SINGLEPHASE"/>
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT" PhaseOrder="2" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_WAIT"/>
-
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT_FASTER" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_WAIT"/>
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT_FASTER" PhaseOrder="1" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_SINGLEPHASE_FASTER"/>
-		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_WAIT_FASTER" PhaseOrder="2" TurnMode="TURNMODE_SIMULTANEOUS"	ActiveSegmentType="TURNSEG_WAIT"/>
+		<!-- Fast timer - single phase -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_FAST" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_FAST"/>
+		
+		<!-- Normal timer - single phase -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_NORMAL"/>
+		
+		<!-- Normal with Wait - three phases (wait, normal, wait) -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_WAIT"/>
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="1" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_NORMAL"/>
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="2" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_WAIT"/>
 	</TurnPhases>
-	
 </Database>

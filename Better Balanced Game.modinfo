@@ -29,7 +29,7 @@
 		</Criteria>
 	</ActionCriteria>
 	<ActionGroups>
-		
+		<!-- Timer -->
 		<ActionGroup id="bbg-turn_timer_changes(game)" scope="game" criteria="always">
 			<Properties>
 				<LoadOrder>11</LoadOrder>
@@ -57,7 +57,17 @@
 			</Actions>
 		</ActionGroup>
 
+		<!-- Mementos -->
+		<ActionGroup id="shell-unlock_all_mementos" scope="shell" criteria="always">
+			<Actions>
+				<UIScripts>
+					<Item>ui/shell/create-panels/memento-editor.js</Item>
+					<Item>ui/shell/create-panels/memento-slot.js</Item>
+				</UIScripts>
+			</Actions>
+		</ActionGroup>
 
+		<!-- Gameplay -->
 		<ActionGroup id="bbg-antiquity-age-changes" scope="game" criteria="antiquity-age-current">
 			<Properties>
 				<LoadOrder>12</LoadOrder>
