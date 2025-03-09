@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="better_balance_game" version="1"
+<Mod id="better_balance_game" version="1.3"
 	xmlns="ModInfo">
 	<Properties>
 		<Name>Better Balanced Game</Name>
-		<Description>Bringing the BBG mod over to civilization 7 to better balanced the base game</Description>
+		<Description>Bringing the BBG mod over to civilization 7 to better balance the base game</Description>
 		<Authors>Khakis7</Authors>
 		<Package>Mod</Package>
 	</Properties>
@@ -29,9 +29,38 @@
 		</Criteria>
 	</ActionCriteria>
 	<ActionGroups>
+		
+		<ActionGroup id="bbg-turn_timer_changes(game)" scope="game" criteria="always">
+			<Properties>
+				<LoadOrder>11</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateDatabase>
+					<Item>data/xml/TurnPhases_bbg.xml</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+		<ActionGroup id="bbg-turn_timer_changes(shell)" scope="shell" criteria="always">
+			<Properties>
+				<LoadOrder>11</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateDatabase>
+					<Item>config/config_bbg.xml</Item>
+					<Item>config/SetupParameters_bbg.xml</Item>
+
+				</UpdateDatabase>
+				<UpdateText>
+					<!-- Can do it with sql, but this is lower effort -->
+					<Item>Localization/en_us/TurnPhasesText_bbg.xml</Item>
+				</UpdateText>
+			</Actions>
+		</ActionGroup>
+
+
 		<ActionGroup id="bbg-antiquity-age-changes" scope="game" criteria="antiquity-age-current">
 			<Properties>
-				<LoadOrder>10</LoadOrder>
+				<LoadOrder>12</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateText>
@@ -44,7 +73,7 @@
 		</ActionGroup>
 		<ActionGroup id="bbg-antiquity-persistent-changes" scope="game" criteria="always">
 			<Properties>
-				<LoadOrder>11</LoadOrder>
+				<LoadOrder>13</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateText>
@@ -57,7 +86,7 @@
 		</ActionGroup>
 		<ActionGroup id="bbg-antiquity-age-loc-changes" scope="shell" criteria="always">
 			<Properties>
-				<LoadOrder>12</LoadOrder>
+				<LoadOrder>14</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateText>
@@ -70,7 +99,7 @@
 		</ActionGroup>
 		<ActionGroup id="bbg-leader-changes" scope="game" criteria="always">
 			<Properties>
-				<LoadOrder>13</LoadOrder>
+				<LoadOrder>15</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateDatabase>
@@ -83,4 +112,7 @@
 			</Actions>
 		</ActionGroup>
 	</ActionGroups>
+	<LocalizedText>
+		<File>Localization/en_us/ModuleText.xml</File>
+	</LocalizedText>
 </Mod>

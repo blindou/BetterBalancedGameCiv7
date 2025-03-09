@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<Parameters>
+		
+		<!-- 
+			Enable TurnPhaseType option in create mp game UI 
+		-->
+		<Row ParameterID="TurnPhaseType" Name="LOC_GAME_TURNPHASE_TYPE" Description="LOC_GAME_TURNPHASE_DESC" Domain="StandardTurnPhases" Hash="1" DefaultValue="TURNPHASE_SIMULTANEOUS" ConfigurationGroup="Game" ConfigurationKey="TurnPhaseType" GroupId="GameOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="1" SupportsSinglePlayer="0" ChangeableAfterGameStart="0" SortIndex="41"/>
+		
+		
+		<!--
+		<Row ParameterID="test" Name="LOC_TEST_NAME" Description="LOC_TEST_DESC" Domain="StandardTurnPhases" Hash="0" DefaultValue="1" ConfigurationGroup="Game" ConfigurationKey="AgeProgressionFromPlayerEliminatedEnabled" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="3000"/>
+		-->
+	</Parameters>
+</Database>
