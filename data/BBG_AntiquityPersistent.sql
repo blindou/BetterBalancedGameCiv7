@@ -18,7 +18,6 @@
 
 --========================================================================================================================	
 -- Machiavelli
--- REMOVED - +3 influence a turn on the palace
 -- +25 gold when Diplomatic Action are accepted or declined  (from +50 / +100)
 --========================================================================================================================
 	UPDATE ModifierArguments
@@ -54,6 +53,16 @@
 --========================================================================================================================
 
 --========================================================================================================================	
+-- Hatshepsut
+-- +1 culture / +1 gold from imported resources (from +1 culture)
+--========================================================================================================================
+	UPDATE ModifierArguments
+	SET	Value = 'YIELD_CULTURE, YIELD_GOLD'
+	WHERE ModifierId = 'HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES' and name = 'YieldType';	
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================	
 -- Frederick
 -- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
@@ -74,7 +83,6 @@
 --========================================================================================================================	
 -- Isabella
 -- Remove bonus gold from discovering natural wonders
--- Reduce bonus yield to 75% on natural wonder tiles (from 100%)
 -- Greatly increased spawn bias towards natural wonders	
 --========================================================================================================================
 	UPDATE StartBiasTerrains
@@ -83,10 +91,6 @@
 
 	DELETE FROM TraitModifiers
 	where ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and TraitType = 'TRAIT_LEADER_ISABELLA_ABILITY';
-
-	UPDATE ModifierArguments
-	SET	Value = 75
-	WHERE ModifierId = 'ISABELLA_MOD_DOUBLE_NATURAL_WONDERS_ABILITY' and name = 'Percent';
 --========================================================================================================================
 
 --========================================================================================================================
@@ -115,6 +119,47 @@
 	UPDATE DiplomaticActionInfluenceCosts
 	SET	InfCostHostile = 150, InfCostUnfriendly = 150, InfCostNeutral = 150, InfCostFriendly = 150, InfCostHelpful = 150
 	WHERE DiplomacyActionType = 'DIPLOMACY_ACTION_ESPIONAGE_STEAL_TECH';
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Egypt
+-- Add new tradition usable in exploration and modern (after playing egypt in antiquity) for +2 prod to navigable rivers
+--========================================================================================================================
+	INSERT INTO Types
+		(Type,					Kind)
+	VALUES	('NODE_CIVIC_AQ_EGYPT_NILE_LEGACY',	'KIND_TREE_NODE');
+
+	INSERT INTO TYPEQUOTES
+		(Type,					Quote,					QuoteAuthor,					QuoteAudio)
+	VALUES	('NODE_CIVIC_AQ_EGYPT_NILE_LEGACY',	'LOC_CIVIC_AQ_EGYPT_NILE_LEGACY_QUOTE',	'LOC_CIVIC_AQ_EGYPT_NILE_LEGACY_QUOTE_AUTHOR',	'');
+
+--	INSERT INTO ProgressionTreeNodes
+--		(ProgressionTreeNodeType,		ProgressionTree,	Cost,	Name,					IconString)
+--	VALUES	('NODE_CIVIC_AQ_EGYPT_NILE_LEGACY',	'TREE_CIVICS_AQ_EGYPT',	'9999',	'NODE_CIVIC_AQ_EGYPT_NILE_LEGACY_NAME',	'cult_egypt');
+
+--	INSERT INTO ProgressionTreeNodeUnlocks
+--		(ProgressionTreeNodeType,		TargetKind,		TargetType,			UnlockDepth)
+--	VALUES	('NODE_CIVIC_AQ_EGYPT_NILE_LEGACY',	'KIND_TRADITION',	'TRADITION_NILE_LEGACY',	'1');
+
+	INSERT INTO Types
+		(Type,				Kind)
+	VALUES	('TRADITION_NILE_LEGACY',	'KIND_TRADITION');
+
+	INSERT INTO TRADITIONS
+		(TraditionType,			Name,			Description,			TraitType,	AgeType)
+	VALUES	('TRADITION_NILE_LEGACY',	'LOC_NILE_LEGACY_NAME',	'LOC_NILE_LEGACY_DESCRIPTION',	'TRAIT_EGYPT',	'AGE_ANTIQUITY');
+
+	INSERT INTO TraditionModifiers
+		(TraditionType,			ModifierId)
+	VALUES	('TRADITION_NILE_LEGACY',	'NILE_LEGACY_MOD_PROD_BBG');
+
+	INSERT INTO ModifierStrings
+		(ModifierId,			Context,	Text)
+	VALUES	('NILE_LEGACY_MOD_PROD_BBG',	'Description',	'LOC_TRADITION_NILE_LEGACY_DESCRIPTION');
+
+	INSERT INTO Warehouse_YieldChanges
+		(ID,						Age,			YieldType,		YieldChange,	NavigableRiverInCity)
+	VALUES	('EgyptNileLegacyNavigableRiverProduction',	'AGE_ANTIQUITY',	'YIELD_PRODUCTION',	'2',		'TRUE');
 --========================================================================================================================
 
 --========================================================================================================================	

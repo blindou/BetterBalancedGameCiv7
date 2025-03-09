@@ -46,9 +46,7 @@
 			</Properties>
 			<Actions>
 				<UpdateDatabase>
-					<Item>config/config_bbg.xml</Item>
 					<Item>config/SetupParameters_bbg.xml</Item>
-
 				</UpdateDatabase>
 				<UpdateText>
 					<!-- Can do it with sql, but this is lower effort -->
@@ -118,6 +116,7 @@
 					<Item>data/xml/constructibles_bbg.xml</Item>
 					<Item>data/xml/units_bbg.xml</Item>
 					<Item>data/xml/units_gameeffects_bbg.xml</Item>
+					<Item>data/xml/civ_gameeffects_bbg.xml</Item>
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>

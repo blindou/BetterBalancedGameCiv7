@@ -35,16 +35,28 @@
 --========================================================================================================================
 
 --========================================================================================================================	
+-- Hatshepsut
+-- +1 culture / +1 gold from imported resources (from +1 culture)
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = '+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold for every imported Resource. +15% [icon:YIELD_PRODUCTION] Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers.'
+    WHERE Tag = 'LOC_LEADER_HATSHEPSUT_DESCRIPTION';   
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI][B]+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold [/B]for every imported [B]Resource[/B].[LI][B]+15% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Buildings [/B]and [B]Wonders [/B]in [B]Cities [/B]adjacent to [B]Navigable Rivers[/B].[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================	
 -- Isabella
 -- Remove bonus gold from discovering natural wonders
--- Reduce bonus yield to 75% on natural wonder tiles (from 100%)
 -- Greatly increased spawn bias towards natural wonders	
 --========================================================================================================================
     UPDATE LocalizedText
-    SET Text = '+75% tile yields from Natural Wonders. +50% [icon:YIELD_GOLD] Gold towards purchasing Naval Units. -1 [icon:YIELD_GOLD] Gold maintenance for Naval Units.'
+    SET Text = '+100% tile yields from Natural Wonders. +50% [icon:YIELD_GOLD] Gold towards purchasing Naval Units. -1 [icon:YIELD_GOLD] Gold maintenance for Naval Units.'
     WHERE Tag = 'LOC_LEADER_ISABELLA_DESCRIPTION';   
     UPDATE LocalizedText
-    SET Text = '[LIST][LI][B]+75% tile yields [/B]from [B]Natural Wonders[/B].[LI][B]+50% [icon:YIELD_GOLD] Gold [/B]towards purchasing [B]Naval Units[/B].[LI][B]-1 [icon:YIELD_GOLD] Gold [/B]maintenance for [B]Naval Units[/B].[/LIST]'
+    SET Text = '[LIST][LI][B]+100% tile yields [/B]from [B]Natural Wonders[/B].[LI][B]+50% [icon:YIELD_GOLD] Gold [/B]towards purchasing [B]Naval Units[/B].[LI][B]-1 [icon:YIELD_GOLD] Gold [/B]maintenance for [B]Naval Units[/B].[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_ISABELLA_ABILITY_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
@@ -106,6 +118,19 @@
         (Language, Tag, Text) VALUES
         ('en_US', 'LOC_TRAIT_LEADER_NAPOLEON_ALT_SIEGE_COMBAT_STR', '+5 Combat Strength for Siege units.');
 --========================================================================================================================
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Egypt
+-- Add new tradition usable in exploration and modern (after playing egypt in antiquity) for +2 prod to navigable rivers
+-- ========================================================================================================================
+	INSERT OR REPLACE INTO LocalizedText
+		(Tag,				Language,	Text)
+	VALUES	('LOC_NILE_LEGACY_DESCRIPTION', 'en_US',	'+2[icon:YIELD_PRODUCTION] Production on Navigable Rivers.');
+
+	INSERT OR REPLACE INTO LocalizedText
+		(Tag,				Language,	Text)
+	VALUES	('LOC_NILE_LEGACY_NAME',	'en_US',	'Nile Legacy');
 --========================================================================================================================
 
 --========================================================================================================================	

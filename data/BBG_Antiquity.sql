@@ -31,17 +31,9 @@
 
 --========================================================================================================================
 -- Maya
--- Civ Civic Calendar Round +5% science or culture from finishing techs or civics (from +10%)
 -- UB Uwaybil K’uh +5% production for city when completing a tech (from +15%)
 -- UB K’uh Nah no longer gains +2 science if placed on vegetation
 --========================================================================================================================
-	UPDATE ModifierArguments
-	SET	Value = 5
-	WHERE ModifierId = 'MOD_CALENDAR_ROUND_CULTURE_FOR_TECH' and name = 'PercentCost';
-    UPDATE ModifierArguments
-	SET	Value = 5
-	WHERE ModifierId = 'MOD_CALENDAR_ROUND_SCIENCE_FOR_CIVIC' and name = 'PercentCost';
-
 	UPDATE ModifierArguments
 	SET	Value = 5
 	WHERE ModifierId = 'MOD_MAYA_UWAYBIL_KUH_PRODUCTION_ON_TECH_COMPLETED' and name = 'PercentCost';
