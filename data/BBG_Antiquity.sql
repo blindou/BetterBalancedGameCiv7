@@ -34,10 +34,11 @@
 --========================================================================================================================
 -- Mississippian
 -- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
+-- CHANGE IS NOW MOVED TO BBG_AntiquityPersistent.sql
 --========================================================================================================================
-	UPDATE Adjacency_YieldChanges
-	SET	YieldChange = 0.5
-	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
+--	UPDATE Adjacency_YieldChanges
+--	SET	YieldChange = 0.5
+--	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
 --========================================================================================================================
 --========================================================================================================================
 
