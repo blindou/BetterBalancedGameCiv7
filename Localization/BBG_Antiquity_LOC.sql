@@ -10,17 +10,9 @@
 
 --========================================================================================================================
 -- Maya
--- Civ Civic Calendar Round +5% science or culture from finishing techs or civics (from +10%)
 -- UB Uwaybil K’uh +5% production for city when completing a tech (from +15%)
 -- UB K’uh Nah no longer gains +2 science if placed on vegetation
 --========================================================================================================================
-    UPDATE LocalizedText
-    SET Text = 'After researching a Technology, gain[icon:YIELD_CULTURE] Culture equal to 5% of its cost.'
-    WHERE Tag = 'LOC_MOD_CALENDAR_ROUND_CULTURE_FOR_TECH_DESCRIPTION';
-    UPDATE LocalizedText
-    SET Text = 'After studying a Civic, gain[icon:YIELD_SCIENCE] Science equal to 5% of its cost.'
-    WHERE Tag = 'LOC_MOD_CALENDAR_ROUND_SCIENCE_FOR_CIVIC_DESCRIPTION';
-
     UPDATE LocalizedText
     SET Text = "Maya Unique Quarter. Created by constructing the Jalaw and K'uh Nah in the same District. Every time you research a Technology, this Settlement gains[icon:YIELD_PRODUCTION] Production equal to 5% of its cost."
     WHERE Tag = 'LOC_QUARTER_UWAYBIL_KUH_DESCRIPTION';

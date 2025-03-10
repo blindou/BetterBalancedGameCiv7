@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<Types>
+		<!-- Create types for the new turn segments and phases -->
+		<Row Type="TURNPHASE_SIMULTANEOUS_WAIT"	Kind="KIND_TURNPHASE"/>
+		<Row Type="TURNSEG_WAIT" Kind="KIND_TURNSEGMENT"/>
+		
+		<!-- New turn segment types for the different dynamic timers -->
+		<Row Type="TURNSEG_SINGLEPHASE_FAST" Kind="KIND_TURNSEGMENT"/>
+		<Row Type="TURNSEG_SINGLEPHASE_NORMAL" Kind="KIND_TURNSEGMENT"/>
+		
+		<!-- New turn phase types -->
+		<Row Type="TURNPHASE_SIMULTANEOUS_FAST" Kind="KIND_TURNPHASE"/>
+		<Row Type="TURNPHASE_SIMULTANEOUS_NORMAL" Kind="KIND_TURNPHASE"/>
+		<Row Type="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Kind="KIND_TURNPHASE"/>
+	</Types>
+	
+	<!-- Define the turn segments with the specific time parameters -->
+	<TurnSegments>
+		<!-- Wait segment with 1 second duration -->
+		<Row TurnSegmentType="TURNSEG_WAIT" Name="LOC_WAIT_PHASE" Sound="" AllowStrategicCommands="false" AllowTacticalCommands="false" AllowTurnUnready="false" TimeLimit_Base="1" TimeLimit_PerCity="0" TimeLimit_PerUnit="0"/>
+		
+		<!-- Fast timer: 15 seconds base, 5 seconds per city, 1 second per unit -->
+		<Row TurnSegmentType="TURNSEG_SINGLEPHASE_FAST" Name="" Sound="Play_MP_Strategic_Turn_Start" AllowStrategicCommands="true" AllowTacticalCommands="true" TimeLimit_Base="15" TimeLimit_PerCity="5" TimeLimit_PerUnit="1"/>
+		
+		<!-- Normal timer: 20 seconds base, 5 seconds per city, 3 seconds per unit -->
+		<Row TurnSegmentType="TURNSEG_SINGLEPHASE_NORMAL" Name="" Sound="Play_MP_Strategic_Turn_Start" AllowStrategicCommands="true" AllowTacticalCommands="true" TimeLimit_Base="20" TimeLimit_PerCity="5" TimeLimit_PerUnit="3"/>
+	</TurnSegments>
+	
+	<!-- Define the turn phases that combine the segments -->
+	<TurnPhases>
+		<!-- Fast timer - single phase -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_FAST" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_FAST"/>
+		
+		<!-- Normal timer - single phase -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_NORMAL"/>
+		
+		<!-- Normal with Wait - three phases (wait, normal, wait) -->
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="0" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_WAIT"/>
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="1" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_SINGLEPHASE_NORMAL"/>
+		<Row TurnPhaseType="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" PhaseOrder="2" TurnMode="TURNMODE_SIMULTANEOUS" ActiveSegmentType="TURNSEG_WAIT"/>
+	</TurnPhases>
+</Database>

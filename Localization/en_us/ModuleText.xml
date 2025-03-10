@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<EnglishText>
+		<Row Tag="LOC_MODULE_BBG_NAME">
+			<Text>Better Balanced Game</Text>
+		</Row>
+		<Row Tag="LOC_MODULE_BBG_DESCRIPTION">
+			<Text>Bringing the BBG mod over to civilization 7 to better balance the base game</Text>
+		</Row>
+	</EnglishText>
+</Database>

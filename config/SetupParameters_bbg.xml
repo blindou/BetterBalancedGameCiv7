@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<Parameters>
+		<!--  
+			Enable TurnPhaseType option in create mp game UI  
+		-->
+		<Row ParameterID="TurnPhaseType" 
+			Name="LOC_GAME_TURNPHASE_TYPE" 
+			Description="LOC_GAME_TURNPHASE_DESC" 
+			Domain="StandardTurnPhases" 
+			Hash="1" 
+			DefaultValue="TURNPHASE_SIMULTANEOUS" 
+			ConfigurationGroup="Game" 
+			ConfigurationKey="TurnPhaseType" 
+			GroupId="GameOptions" 
+			SupportsLANMultiplayer="0" 
+			SupportsInternetMultiplayer="1" 
+			SupportsSinglePlayer="0" 
+			ChangeableAfterGameStart="0" 
+			SortIndex="41"/>
+		
+		<!-- 
+		<Row ParameterID="test" Name="LOC_TEST_NAME" Description="LOC_TEST_DESC" Domain="StandardTurnPhases" Hash="0" DefaultValue="1" ConfigurationGroup="Game" ConfigurationKey="AgeProgressionFromPlayerEliminatedEnabled" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="3000"/> 
+		-->
+	</Parameters>
+	
+	<!-- Add domain values for the new turn phases -->
+	<DomainValues>
+		<!-- Add new turn phase options to the StandardTurnPhases domain -->
+		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_FAST" Name="LOC_TURNPHASE_SIMULTANEOUS_FAST" Description="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC" SortIndex="60"/>
+		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_NORMAL" Name="LOC_TURNPHASE_SIMULTANEOUS_NORMAL" Description="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC" SortIndex="70"/>
+		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Name="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Description="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC" SortIndex="80"/>
+	</DomainValues>
+</Database>
