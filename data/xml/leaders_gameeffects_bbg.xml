@@ -4,7 +4,18 @@
 		<Argument name="ConstructibleAdjacency">PachacutiMountainProduction</Argument>
 		<Argument name="Tooltip">LOC_TRAIT_LEADER_PACHACUTI_ABILITY_NAME</Argument>
 	</Modifier>
-
+	<Modifier id="HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES_BBG" collection="COLLECTION_OWNER" effect="EFFECT_PLAYER_ADJUST_YIELD_PER_RESOURCE">
+		<Argument name="YieldType">YIELD_CULTURE</Argument>
+		<Argument name="Amount">1</Argument>
+		<Argument name="Imported">true</Argument>
+		<Argument name="Tooltip">LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_NAME</Argument>
+	</Modifier>
+	<Modifier id="HATSHEPSUT_MOD_GOLD_FROM_RESOURCES_BBG" collection="COLLECTION_OWNER" effect="EFFECT_PLAYER_ADJUST_YIELD_PER_RESOURCE">
+		<Argument name="YieldType">YIELD_GOLD</Argument>
+		<Argument name="Amount">1</Argument>
+		<Argument name="Imported">true</Argument>
+		<Argument name="Tooltip">LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_NAME</Argument>
+	</Modifier>
 	<Modifier id="NAPOLEON_ALT_MOD_SIEGE_COMBAT_STRENGTH" collection="COLLECTION_PLAYER_UNITS" effect="EFFECT_UNIT_ADJUST_ABILITY">
 		<SubjectRequirements>
 			<Requirement type="REQUIREMENT_UNIT_TAG_MATCHES">

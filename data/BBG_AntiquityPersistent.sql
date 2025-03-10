@@ -56,9 +56,8 @@
 -- Hatshepsut
 -- +1 culture / +1 gold from imported resources (from +1 culture)
 --========================================================================================================================
-	UPDATE ModifierArguments
-	SET	Value = 'YIELD_CULTURE, YIELD_GOLD'
-	WHERE ModifierId = 'HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES' and name = 'YieldType';	
+	DELETE FROM TraitModifiers
+	where ModifierId = 'HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES' and TraitType = 'TRAIT_LEADER_HATSHEPSUT_ABILITY';
 --========================================================================================================================
 --========================================================================================================================
 
