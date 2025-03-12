@@ -2,6 +2,69 @@
 <Database>
   <LocalizedText>
 	<!--========================================================================================================================	
+	-- BBG Info
+	--=======================================================================================================================-->
+    <Replace Tag="LOC_MODULE_BBG_DESCRIPTION" Language="ru_RU">
+      <Text>BBG - мод для лучшего баланса базовой игры.</Text>
+	</Replace>
+	<!--========================================================================================================================	
+	-- Таймер
+	--=======================================================================================================================-->
+    <Replace Tag="LOC_GAME_TURNPHASE_TYPE" Language="ru_RU">
+      <Text>Расширенные настройки хода:</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS" Language="ru_RU">
+      <Text>Одновременные (по умолчанию)</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_DESC" Language="ru_RU">
+      <Text>Настройки по умолчания для стандартных одновременных ходов</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST" Language="ru_RU">
+      <Text>Быстрый динамический таймер</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC" Language="ru_RU">
+      <Text>Быстрый динамический таймер (15с база + 5с на город + 1с на юнит)</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL" Language="ru_RU">
+      <Text>Обычный динамический таймер</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC" Language="ru_RU">
+      <Text>Обычный динамический таймер (20с база + 5с на город + 3с на юнит)</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Language="ru_RU">
+      <Text>Обычный динамический таймер +Ожидание</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC" Language="ru_RU">
+      <Text>Обычный динамический таймер с паузой 1с до и после хода</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FASTER" Language="ru_RU">
+      <Text>Одновременные, быстрее.</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_DYNAMIC" Language="ru_RU">
+      <Text>Гибридный</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT" Language="ru_RU">
+      <Text>Одновременные +2с ожидание (экспериментально)</Text>
+	</Replace>
+	<Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT_FASTER" Language="ru_RU">
+      <Text>Одновременные, быстрее +2с ожидания (экспериментально)</Text>
+	</Replace>
+	<Replace Tag="LOC_GAME_TURNPHASE_DESC" Language="ru_RU">
+		<Text>Одновременные — настройка по умолчанию для стандартных одновременных ходов.[n] [n]
+
+			Гибридный — одновременный в мирное время, последовательный в военное время.[n] [n]
+
+			Быстрый динамический таймер — игроки ходят одновременно с более быстрым динамическим таймером (базово 15с + 5с на город + 1с на юнит).[n] [n]
+
+			Обычный динамический таймер — игроки ходят одновременно со стандартным динамическим таймером (базово 20с + 5с на город + 3с на отряд).[n] [n]
+
+			Обычный динамический таймер + Ожидание — то же, что и обычный динамический таймер, но включает паузу в 1 секунду до и после каждого хода. Это может помочь уменьшить рассинхронизацию.[n] [n]
+		</Text>
+	</Replace>
+	<Replace Tag="LOC_WAIT_PHASE" Language="ru_RU">
+      <Text>Пауза</Text>
+	</Replace>
+	<!--========================================================================================================================	
 	-- Макиавелли
 	--=======================================================================================================================-->
     <Replace Tag="LOC_LEADER_MACHIAVELLI_DESCRIPTION" Language="ru_RU">
@@ -93,6 +156,30 @@
     </Replace>
 	<Replace Tag="LOC_NILE_LEGACY_NAME" Language="ru_RU">
       <Text>Наследие Нила</Text>
+    </Replace>
+	<Replace Tag="LOC_MOD_PERIPLUS_OF_THE_ERYTHRAEAN_SEA_RESOURCE_CAP_DESCRIPTION" Language="ru_RU">
+      <Text>+2 к ячейкам ресурсов поселений на побережье или судоходных реках.</Text>
+    </Replace>
+	<!--========================================================================================================================	
+	-- Майя
+	--=======================================================================================================================-->
+    <Replace Tag="LOC_QUARTER_UWAYBIL_KUH_DESCRIPTION" Language="ru_RU">
+      <Text>Уникальный квартал Майя. Чтобы создать его, постройте Джалав и Ку На в одном районе. Когда вы исследуете технологию, это поселение получает 5% ее стоимости в единицах[icon:YIELD_PRODUCTION] производства.</Text>
+    </Replace>
+	<Replace Tag="LOC_QUARTER_UWAYBIL_KUH_TOOLTIP" Language="ru_RU">
+      <Text>Когда вы исследуете технологию, это поселение получает 5% ее стоимости в единицах[icon:YIELD_PRODUCTION] производства.</Text>
+    </Replace>
+	<Replace Tag="LOC_BUILDING_KUH_NAH_DESCRIPTION" Language="ru_RU">
+      <Text>+3 к [icon:YIELD_SCIENCE] науке. Бонус соседства +1 к [icon:YIELD_SCIENCE] науке от чудес. Уникальное научное здание майя. Не устаревает.</Text>
+    </Replace>
+	<Replace Tag="LOC_BUILDING_KUH_NAH_TOOLTIP" Language="ru_RU">
+      <Text>Уникальное научное здание майя. Не устаревает.</Text>
+    </Replace>
+	<!--========================================================================================================================	
+	-- Персия
+	--=======================================================================================================================-->
+    <Replace Tag="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Language="ru_RU">
+      <Text>+1[icon:YIELD_CULTURE] к культуре и +3[icon:YIELD_GOLD] к золоту. Уникальное улучшение Персии. Не устаревает. Не убирает бонусы от склада с клетки. Нельзя разместить рядом с другим садом пайридаэзы.</Text>
     </Replace>
 	<!--========================================================================================================================	
 	-- Mementos
