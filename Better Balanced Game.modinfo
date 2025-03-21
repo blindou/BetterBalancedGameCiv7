@@ -123,5 +123,6 @@
 	</ActionGroups>
 	<LocalizedText>
 		<File>Localization/en_us/ModuleText.xml</File>
+		<File>Localization/ru_RU/ru_RU_Text.xml</File>
 	</LocalizedText>
 </Mod>
