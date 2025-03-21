@@ -65,9 +65,5 @@
 	UPDATE ModifierArguments
 	SET	Value = 5
 	WHERE ModifierId = 'HAMARANA_COUNCIL_MOD_COMBAT_ATTACK';
-
-    UPDATE Constructible_YieldChanges
-	SET	YieldChange = 3
-	WHERE ConstructibleType = 'IMPROVEMENT_PAIRIDAEZA' and YieldType = 'YIELD_GOLD';
 --========================================================================================================================
 --========================================================================================================================

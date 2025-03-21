@@ -17,25 +17,15 @@
 -- --========================================================================================================================
 
 --========================================================================================================================	
--- Machiavelli
--- +25 gold when Diplomatic Action are accepted or declined  (from +50 / +100)
---========================================================================================================================
-	UPDATE ModifierArguments
-	SET	Value = 25
-	WHERE ModifierId = 'MACHIAVELLI_MOD_GOLD_ACTION_ACCEPT' and name = 'Amount';	
-	UPDATE ModifierArguments
-	SET	Value = 50
-	WHERE ModifierId = 'MACHIAVELLI_MOD_GOLD_ACTION_REJECT' and name = 'Amount';
---========================================================================================================================
---========================================================================================================================
-
---========================================================================================================================	
 -- Pachacuti
 -- Increased Spawn Bias towards Mountains
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 100
 	WHERE LeaderType = 'LEADER_PACHACUTI' and TerrainType = 'TERRAIN_MOUNTAIN';
+	INSERT INTO TraitModifiers
+        (TraitType,                    ModifierId)
+    VALUES    ('TRAIT_LEADER_PACHACUTI_ABILITY',        'PACHACUTI_MOD_QUARTERS_MOUNTAINS_BBG');
 --========================================================================================================================
 --========================================================================================================================
 
@@ -81,15 +71,19 @@
 
 --========================================================================================================================	
 -- Isabella
--- Remove bonus gold from discovering natural wonders
+-- Receive 150g when discovering a natural wonder (From 300)
 -- Greatly increased spawn bias towards natural wonders	
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 2000
 	WHERE LeaderType = 'LEADER_ISABELLA';
 
-	DELETE FROM TraitModifiers
-	where ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and TraitType = 'TRAIT_LEADER_ISABELLA_ABILITY';
+	UPDATE ModifierArguments
+	SET	Value = 150
+	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'Amount';		
+	UPDATE ModifierArguments
+	SET	Value = 150
+	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'DistantLandBonus';	
 --========================================================================================================================
 
 --========================================================================================================================
@@ -116,7 +110,7 @@
 -- Steal Technology Diplomatic action now costs 60 influence (from 40)
 --========================================================================================================================	
 	UPDATE DiplomaticActionInfluenceCosts
-	SET	InfCostHostile = 150, InfCostUnfriendly = 150, InfCostNeutral = 150, InfCostFriendly = 150, InfCostHelpful = 150
+	SET	InfCostHostile = 120, InfCostUnfriendly = 120, InfCostNeutral = 120, InfCostFriendly = 120, InfCostHelpful = 120
 	WHERE DiplomacyActionType = 'DIPLOMACY_ACTION_ESPIONAGE_STEAL_TECH';
 --========================================================================================================================
 
@@ -193,6 +187,13 @@
 		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_1',
 		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_4'
 	);
+
+	-- Shisa Necklace down to 50 influence (From 100)
+	UPDATE ModifierArguments 
+	SET Value = 50
+	WHERE ModifierId IN (
+		'MEMENTO_FOUNDATION_SHISA_NECKLACE_MODIFIER'
+	) and name = 'Amount';
 --========================================================================================================================
 --========================================================================================================================
 
@@ -208,3 +209,15 @@
 	UPDATE Adjacency_YieldChanges
 	SET	YieldChange = 0.5
 	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
+
+
+
+--========================================================================================================================
+-- Persia
+-- UI Pairidaeza +3 gold +1 culture (from +1 gold +1 culture) 
+--========================================================================================================================\
+    UPDATE Constructible_YieldChanges
+	SET	YieldChange = 3
+	WHERE ConstructibleType = 'IMPROVEMENT_PAIRIDAEZA' and YieldType = 'YIELD_GOLD';
+--========================================================================================================================
+--========================================================================================================================
