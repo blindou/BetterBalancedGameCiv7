@@ -157,8 +157,8 @@
 -- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
 -- CHANGE MOVED HERE AS THE UNNERFED VERSION BECAME AVAILABLE AFTER ANTIQUITY TRANSITION
 --========================================================================================================================
-    UPDATE LocalizedText
-    SET Text = "All Buildings receive a +.5[icon:YIELD_GOLD] Gold Adjacency for Resources."
-    WHERE Tag = 'LOC_TRADITION_SHELL_TEMPERED_POTTERY_DESCRIPTION';
+--    UPDATE LocalizedText
+--    SET Text = "All Buildings receive a +.5[icon:YIELD_GOLD] Gold Adjacency for Resources."
+--    WHERE Tag = 'LOC_TRADITION_SHELL_TEMPERED_POTTERY_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================

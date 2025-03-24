@@ -105,14 +105,7 @@
 --========================================================================================================================
 
 --========================================================================================================================
---========================================================================================================================	
--- Diplomacy
--- Steal Technology Diplomatic action now costs 60 influence (from 40)
---========================================================================================================================	
-	UPDATE DiplomaticActionInfluenceCosts
-	SET	InfCostHostile = 120, InfCostUnfriendly = 120, InfCostNeutral = 120, InfCostFriendly = 120, InfCostHelpful = 120
-	WHERE DiplomacyActionType = 'DIPLOMACY_ACTION_ESPIONAGE_STEAL_TECH';
---========================================================================================================================
+
 
 --========================================================================================================================	
 -- Egypt
@@ -206,9 +199,9 @@
 -- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
 -- CHANGE MOVED HERE AS THE UNNERFED VERSION BECAME AVAILABLE AFTER ANTIQUITY TRANSITION
 --========================================================================================================================
-	UPDATE Adjacency_YieldChanges
-	SET	YieldChange = 0.5
-	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
+--	UPDATE Adjacency_YieldChanges
+--	SET	YieldChange = 0.5
+--	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
 
 
 
