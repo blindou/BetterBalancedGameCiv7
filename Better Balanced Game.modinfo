@@ -32,7 +32,7 @@
 		<!-- Timer -->
 		<ActionGroup id="bbg-turn_timer_changes(game)" scope="game" criteria="always">
 			<Properties>
-				<LoadOrder>11</LoadOrder>
+				<LoadOrder>10</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateDatabase>
@@ -66,6 +66,7 @@
 		</ActionGroup>
 
 		<!-- Gameplay -->
+		<!-- ANTIQUITY -->
 		<ActionGroup id="bbg-antiquity-age-changes" scope="game" criteria="antiquity-age-current">
 			<Properties>
 				<LoadOrder>12</LoadOrder>
@@ -92,9 +93,42 @@
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>
+
+
+		<!-- EXPLORATION -->
+		<ActionGroup id="bbg-exploration-age-changes" scope="game" criteria="exploration-age-current">
+			<Properties>
+				<LoadOrder>15</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateText>
+
+				</UpdateText>
+				<UpdateDatabase>
+					<Item>data/BBG_Exploration.sql</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+		<!-- MODERN -->
+		<ActionGroup id="bbg-modern-age-changes" scope="game" criteria="modern-age-current">
+			<Properties>
+				<LoadOrder>16</LoadOrder>
+			</Properties>
+			<Actions>
+				<UpdateText>
+
+				</UpdateText>
+				<UpdateDatabase>
+					<Item>data/BBG_Modern.sql</Item>
+				</UpdateDatabase>
+			</Actions>
+		</ActionGroup>
+
+
+
 		<ActionGroup id="bbg-antiquity-age-loc-changes" scope="shell" criteria="always">
 			<Properties>
-				<LoadOrder>14</LoadOrder>
+				<LoadOrder>17</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateText>
@@ -107,7 +141,7 @@
 		</ActionGroup>
 		<ActionGroup id="bbg-leader-changes" scope="game" criteria="always">
 			<Properties>
-				<LoadOrder>15</LoadOrder>
+				<LoadOrder>18</LoadOrder>
 			</Properties>
 			<Actions>
 				<UpdateDatabase>
