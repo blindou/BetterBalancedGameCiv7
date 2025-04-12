@@ -7,18 +7,8 @@
 --========================================================================================================================
 --========================================================================================================================
 
--- --========================================================================================================================
--- -- Benjamin Franklin 
--- -- REMOVED - 50% production towards production buildings
--- --========================================================================================================================
--- 	delete from TraitModifiers
--- 	WHERE ModifierId = 'FRANKLIN_MOD_PRODUCTION_BUILDING_RATE' and TraitType = 'TRAIT_LEADER_BENJAMIN_FRANKLIN_ABILITY';
--- --========================================================================================================================
--- --========================================================================================================================
-
 --========================================================================================================================	
 -- Pachacuti
--- Increased Spawn Bias towards Mountains
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 100
@@ -31,7 +21,6 @@
 
 --========================================================================================================================	
 -- Tecumseh
--- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
 	UPDATE ModifierArguments
 	SET	Value = 2
@@ -44,7 +33,6 @@
 
 --========================================================================================================================	
 -- Hatshepsut
--- +1 culture / +1 gold from imported resources (from +1 culture)
 --========================================================================================================================
 	DELETE FROM TraitModifiers
 	where ModifierId = 'HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES' and TraitType = 'TRAIT_LEADER_HATSHEPSUT_ABILITY';
@@ -53,7 +41,6 @@
 
 --========================================================================================================================	
 -- Frederick
--- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
 	DELETE FROM TraitModifiers 
 	WHERE TraitType = 'TRAIT_LEADER_FRIEDRICH_ABILITY' 
@@ -71,25 +58,42 @@
 
 --========================================================================================================================	
 -- Isabella
--- Receive 150g when discovering a natural wonder (From 300)
--- Greatly increased spawn bias towards natural wonders	
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 2000
 	WHERE LeaderType = 'LEADER_ISABELLA';
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Ibn
+--========================================================================================================================
+	delete from TraitModifiers
+	WHERE ModifierId = 'IBN_BATTUTA_MOD_WILDCARD_ATTRIBUTE' and TraitType = 'TRAIT_LEADER_IBN_BATTUTA_ABILITY';
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Simon
+--========================================================================================================================
+	UPDATE ModifierArguments
+	SET	Value = 2
+	WHERE ModifierId = 'BOLIVAR_MOD_WAR_SUPPORT_DEF' and name = 'Amount';	
 
 	UPDATE ModifierArguments
-	SET	Value = 150
-	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'Amount';		
+	SET	Value = 2
+	WHERE ModifierId = 'BOLIVAR_MOD_WAR_SUPPORT_AGGRO' and name = 'Amount';	
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Xerxes 
+--========================================================================================================================
 	UPDATE ModifierArguments
-	SET	Value = 150
-	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'DistantLandBonus';	
+	SET	Value = 'YIELD_GOLD'
+	WHERE ModifierId = 'XERXES_ALT_MOD_UNIQUE_IMPROVEMENT_YIELD' and name = 'YieldType';	
 --========================================================================================================================
 
 --========================================================================================================================
 --========================================================================================================================	
 -- War Support
--- Cities receive -1 happiness per negative war support (from -3) 
 --========================================================================================================================	
 	UPDATE WarWearinessEffects
 	SET	YieldReductionPerLevel = 1
@@ -106,10 +110,8 @@
 
 --========================================================================================================================
 
-
 --========================================================================================================================	
 -- Egypt
--- Add new tradition usable in exploration and modern (after playing egypt in antiquity) for +2 prod to navigable rivers
 --========================================================================================================================
 	INSERT INTO Types
 		(Type,					Kind)
@@ -150,7 +152,6 @@
 
 --========================================================================================================================	
 -- Mementos
--- Update Lydian Coin gold per age from 100 to 50
 --========================================================================================================================	
 	UPDATE ModifierArguments 
 	SET Value = '50'
@@ -161,26 +162,6 @@
 	SET Value = '15'
 	WHERE ModifierId = 'MEMENTO_BENJAMIN_FRANKLIN_BIFOCALS_MODIFIER' and name = 'Amount';
 
-	-- -- Update Imago Mundi sight bonus from +3 to +2
-	UPDATE UnitAbilities 
-	SET AbilityValue = '1'
-	WHERE UnitAbilityType = 'ABILITY_SCOUT_RANGE_INCREASE';
-
-	-- Update Chalcedony Seal yields from +3 to +1
-	UPDATE ModifierArguments 
-	SET Value = '1'
-	WHERE ModifierId IN (
-		'MEMENTO_XERXES_ACHAEMENID_CHALCEDONY_SEAL_MODIFIER_1',
-		'MEMENTO_XERXES_ACHAEMENID_CHALCEDONY_SEAL_MODIFIER_2'
-	) and name = 'Amount';
-
-	-- Remove scouts from Merchants Saddle
-	DELETE FROM ModifierArguments 
-	WHERE ModifierId IN (
-		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_1',
-		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_4'
-	);
-
 	-- Shisa Necklace down to 50 influence (From 100)
 	UPDATE ModifierArguments 
 	SET Value = 50
@@ -190,24 +171,8 @@
 --========================================================================================================================
 --========================================================================================================================
 
-
---========================================================================================================================	
--- Tradition changes
---========================================================================================================================
---========================================================================================================================
--- Mississippian
--- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
--- CHANGE MOVED HERE AS THE UNNERFED VERSION BECAME AVAILABLE AFTER ANTIQUITY TRANSITION
---========================================================================================================================
---	UPDATE Adjacency_YieldChanges
---	SET	YieldChange = 0.5
---	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
-
-
-
 --========================================================================================================================
 -- Persia
--- UI Pairidaeza +3 gold +1 culture (from +1 gold +1 culture) 
 --========================================================================================================================\
     UPDATE Constructible_YieldChanges
 	SET	YieldChange = 3
