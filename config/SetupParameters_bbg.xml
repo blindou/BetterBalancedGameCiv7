@@ -27,8 +27,9 @@
 	<!-- Add domain values for the new turn phases -->
 	<DomainValues>
 		<!-- Add new turn phase options to the StandardTurnPhases domain -->
+		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_TURBO" Name="LOC_TURNPHASE_SIMULTANEOUS_TURBO" Description="LOC_TURNPHASE_SIMULTANEOUS_TURBO_DESC" SortIndex="50"/>
 		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_FAST" Name="LOC_TURNPHASE_SIMULTANEOUS_FAST" Description="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC" SortIndex="60"/>
 		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_NORMAL" Name="LOC_TURNPHASE_SIMULTANEOUS_NORMAL" Description="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC" SortIndex="70"/>
-		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Name="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Description="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC" SortIndex="80"/>
+		<Row Domain="StandardTurnPhases" Value="TURNPHASE_SIMULTANEOUS_CASUAL" Name="LOC_TURNPHASE_SIMULTANEOUS_CASUAL" Description="LOC_TURNPHASE_SIMULTANEOUS_CASUAL_DESC" SortIndex="80"/>
 	</DomainValues>
 </Database>

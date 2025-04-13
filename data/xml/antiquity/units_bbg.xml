@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <UnitAbilityModifiers>
+        <Row UnitAbilityType="ABILITY_HOPLITE" ModifierId="HOPLITE_MOD_COMBAT_VS_CAVALRY_BBG"/>
+    </UnitAbilityModifiers>
+</Database>

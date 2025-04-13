@@ -14,10 +14,10 @@
 -- Hatshepsut
 --========================================================================================================================
     UPDATE LocalizedText
-    SET Text = '+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold for every imported Resource. +15% [icon:YIELD_PRODUCTION] Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers. Resources adjacent to rivers receive +1 [ICON:YIELD_GOLD] Gold and [ICON:YIELD_CULTURE] Culture.'
+    SET Text = '+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold for every imported Resource. +15% [icon:YIELD_PRODUCTION] Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers. Resources adjacent to rivers receive +1 [icon:YIELD_GOLD] Gold and [icon:YIELD_CULTURE] Culture.'
     WHERE Tag = 'LOC_LEADER_HATSHEPSUT_DESCRIPTION';   
     UPDATE LocalizedText
-    SET Text = '[LIST][LI][B]+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold [/B]for every imported [B]Resource[/B].[LI][B]+15% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Buildings [/B]and [B]Wonders [/B]in [B]Cities [/B]adjacent to [B]Navigable Rivers[/B]. [LI]Resources adjacent to rivers receive +1 [ICON:YIELD_GOLD] Gold and [ICON:YIELD_CULTURE] Culture.[/LIST]'
+    SET Text = '[LIST][LI][B]+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold [/B]for every imported [B]Resource[/B].[LI][B]+15% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Buildings [/B]and [B]Wonders [/B]in [B]Cities [/B]adjacent to [B]Navigable Rivers[/B]. [LI]Resources adjacent to rivers receive +1 [icon:YIELD_GOLD] Gold and [icon:YIELD_CULTURE] Culture.[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
@@ -145,6 +145,14 @@
     UPDATE LocalizedText
     SET Text = '[LIST][LI][B]+1 Trade Route [/B]limit with all other Leaders.[LI]Gain [B]50 [icon:YIELD_CULTURE] Culture [/B]and [B]100[icon:YIELD_GOLD] Gold [/B]per Age when you create a [B]Trade Route [/B]or [B]Road[/B].[LI][B]+1[icon:YIELD_GOLD] [B]Gold [/B]per Age on [B]Unique Buildings [/B]and [B]Improvements[/B].[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+3 Combat Strength for Units that are attacking in neutral or enemy territory. Gain 50 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age when you capture a Settlement for the first time. +10% [icon:YIELD_GOLD] Gold in all Settlements. This is doubled in Settlements not founded by you. +1 Settlement Limit per Age.'
+    WHERE Tag = 'LOC_LEADER_XERXES_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI][B]+3 Combat Strength [/B]for Units that are [B]attacking [/B]in neutral or enemy territory.[LI]Gain [B]50 [icon:YIELD_CULTURE] Culture [/B]and [icon:YIELD_GOLD] [B]Gold [/B]per Age when you capture a Settlement for the first time.[LI][B]+10% [icon:YIELD_GOLD] Gold [/B]in all Settlements. This is [B]doubled [/B]in Settlements not founded by you.[LI][B]+1 Settlement Limit [/B]per Age.[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_XERXES_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
 -- ========================================================================================================================	
@@ -153,6 +161,18 @@
     UPDATE LocalizedText
     SET Text = '+100%[icon:YIELD_FOOD] Food and[icon:YIELD_HAPPINESS] Happiness towards maintaining Specialists. +1 [icon:YIELD_PRODUCTION] Production from Specialists.'
     WHERE Tag = 'LOC_TRADITION_KAMBU_MERA_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Khmer
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = 'Gain a unique Sanction called Continental System that reduces the Trade Route limit of the targeted Leader to all other Leaders by 1. Causes a massive Relationship penalty, and costs more to reject. +16 [icon:YIELD_GOLD] Gold per Age for every Leader you are Unfriendly or Hostile with. Can reject Endeavors for free.'
+    WHERE Tag = 'LOC_LEADER_NAPOLEON_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI]Gain a unique [B]Sanction [/B]called [B]Continental System [/B]that reduces the [B]Trade Route [/B]limit of the targeted Leader to [B]all other Leaders [/B]by [B]1[/B]. Causes a massive Relationship penalty, and costs more to reject.[LI][B]+16 [icon:YIELD_GOLD] Gold [/B]per Age for every [B]Leader [/B]you are [B]Unfriendly [/B]or [B]Hostile [/B]with.[LI]Can reject [B]Endeavors [/B]for [B]free[/B].[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_NAPOLEON_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
 --========================================================================================================================	

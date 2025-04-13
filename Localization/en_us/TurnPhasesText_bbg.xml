@@ -12,41 +12,43 @@
 			<Text>Default setting for standard simultaneous turns</Text>
 		</Row>
 
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_TURBO">
+			<Text>Turbo Dynamic Timer</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_TURBO_DESC">
+			<Text>Turbo dynamic timer (45s base + 5s per city + 0.5s per unit)</Text>
+		</Row>
+
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST">
 			<Text>Fast Dynamic Timer</Text>
 		</Row>
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC">
-			<Text>Fast dynamic timer (15s base + 5s per city + 1s per unit)</Text>
+			<Text>Fast dynamic timer (60s base + 5s per city + 1s per unit)</Text>
 		</Row>
 
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL">
 			<Text>Normal Dynamic Timer</Text>
 		</Row>
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC">
-			<Text>Normal dynamic timer (20s base + 5s per city + 3s per unit)</Text>
+			<Text>Normal dynamic timer (30s base + 5s per city + 3s per unit)</Text>
 		</Row>
 
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT">
-			<Text>Normal Dynamic Timer +Wait</Text>
+			<Text>Casual Dynamic Timer</Text>
 		</Row>
 		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC">
-			<Text>Normal dynamic timer with 1s pause before and after turn</Text>
+			<Text>Casual dynamic timer (45s base + 5s per city + 3s per unit)</Text>
 		</Row>
 
-		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_FASTER">
-			<Text>Simultaneous, Faster.</Text>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_CASUAL">
+			<Text>Casual Dynamic Timer</Text>
+		</Row>
+		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_CASUAL_DESC">
+			<Text>Casual dynamic timer (45s base + 5s per city + 3s per unit)</Text>
 		</Row>
 
 		<Row Tag="LOC_TURNPHASE_DYNAMIC">
 			<Text>Hybrid</Text>
-		</Row>
-
-		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT">
-			<Text>Simultaneous +2s wait (experimental)</Text>
-		</Row>
-
-		<Row Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT_FASTER">
-			<Text>Simultaneous, Faster +2s wait (experimental)</Text>
 		</Row>
 
 		<Row Tag="LOC_GAME_TURNPHASE_DESC">
@@ -54,16 +56,14 @@
 
 				Hybrid- Simultaneous at peace, sequential at war.[n] [n]
 
-				Fast Dynamic Timer- Players take turns simultaneously with a faster dynamic timer (15s base + 5s per city + 1s per unit).[n] [n]
+				Turbo Dynamic Timer- Players take turns simultaneously with a very fast dynamic timer (45s base + 5s per city + 0.5s per unit).[n] [n]
 
-				Normal Dynamic Timer- Players take turns simultaneously with a standard dynamic timer (20s base + 5s per city + 3s per unit).[n] [n]
+				Fast Dynamic Timer- Players take turns simultaneously with a fast dynamic timer (60s base + 5s per city + 1s per unit).[n] [n]
 
-				Normal Dynamic Timer +Wait- Same as Normal Dynamic Timer but includes a 1-second pause before and after each turn. This may help reduce desyncs.[n] [n]
+				Normal Dynamic Timer- Players take turns simultaneously with a standard dynamic timer (30s base + 5s per city + 3s per unit).[n] [n]
+
+				Casual Dynamic Timer- Players take turns simultaneously with a relaxed dynamic timer (45s base + 5s per city + 3s per unit).[n] [n]
 			</Text>
-		</Row>
-		
-		<Row Tag="LOC_WAIT_PHASE">
-			<Text>Pause</Text>
 		</Row>
 	</EnglishText>
 </Database>

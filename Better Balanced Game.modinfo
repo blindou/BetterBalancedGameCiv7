@@ -77,7 +77,11 @@
 				</UpdateText>
 				<UpdateDatabase>
 					<Item>data/BBG_Antiquity.sql</Item>
-					<Item>data/xml/civilizations_antiquity_bbg.xml</Item>
+					<Item>data/xml/antiquity/civilizations_bbg.xml</Item>
+					<Item>data/xml/antiquity/constructibles_bbg.xml</Item>
+					<Item>data/xml/antiquity/constructibles_gameeffects_bbg.xml</Item>
+					<Item>data/xml/antiquity/units_bbg.xml</Item>
+					<Item>data/xml/antiquity/units_gameeffects_bbg.xml</Item>
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>
@@ -136,7 +140,7 @@
 					<Item>data/xml/constructibles_bbg.xml</Item>
 					<Item>data/xml/units_bbg.xml</Item>
 					<Item>data/xml/units_gameeffects_bbg.xml</Item>
-					<Item>data/xml/civ_gameeffects_bbg.xml</Item>
+					<Item>data/xml/civilizations_gameeffects_bbg.xml</Item>
 					<Item>data/xml/tradition_gameeffects_bbg.xml</Item>
 					<Item>data/xml/traditions_bbg.xml</Item>
 				</UpdateDatabase>
