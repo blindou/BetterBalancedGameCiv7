@@ -89,6 +89,22 @@
 	INSERT OR REPLACE INTO LocalizedText
 		(Tag,				Language,	Text)
 	VALUES	('LOC_NILE_LEGACY_NAME',	'en_US',	'Nile Legacy');
+
+    UPDATE LocalizedText
+    SET Text = 'Land units receive +3 combat strength in friendly territory.'
+    WHERE Tag = 'LOC_TRADITION_RICHES_OF_THE_DUAT_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+3 combat strength in friendly territory.'
+    WHERE Tag = 'LOC_ABILITY_EGYPT_COMBAT_PREVIEW';
+    
+    UPDATE LocalizedText
+    SET Text = 'Egyptian Unique Quarter. Created by constructing the Mastaba and Mortuary Temple in the same District. Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% wonder production.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_DESCRIPTION';
+    
+    UPDATE LocalizedText
+    SET Text = 'Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% wonder production.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_TOOLTIP';
 --========================================================================================================================
 
 -- ========================================================================================================================	
@@ -103,11 +119,11 @@
     WHERE Tag = 'LOC_IBN_BATTUTA_MOD_MO_WILDCARD_ATTRIBUTE_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = 'Gains 3 Wildcard Attribute Points after the first Civic in every Age. +1 Sight for all Units. Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders claimed territory.'
+    SET Text = 'Gains 2 Wildcard Attribute Points after the first Civic in every Age and 1 at the start of the game. +1 Sight for all Units. Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders claimed territory.'
     WHERE Tag = 'LOC_LEADER_IBN_BATTUTA_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = '[LIST][LI]Gains [B]3 Wildcard Attribute Points [/B]after the first [B]Civic [/B]in every Age.[LI][B]+1 Sight [/B]for all Units.[LI]Gain a unique [B]Endeavor [/B]called [B]Trade Maps [/B]that allows you to gradually see other Leaders [B]claimed territory[/B].[/LIST]'
+    SET Text = '[LIST][LI]Gains [B]3 Wildcard Attribute Points [/B]after the first [B]Civic [/B]in every Age and 1 at the start of the game.[LI][B]+1 Sight [/B]for all Units.[LI]Gain a unique [B]Endeavor [/B]called [B]Trade Maps [/B]that allows you to gradually see other Leaders [B]claimed territory[/B].[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
@@ -138,14 +154,6 @@
 -- ========================================================================================================================	
 -- Xerxes
 -- ========================================================================================================================
-    UPDATE LocalizedText
-    SET Text = '+1 Trade Route limit with all other Leaders. Gain 50 [icon:YIELD_CULTURE] Culture and 100 [icon:YIELD_GOLD] Gold per Age when you create a Trade Route or Road. +1 [icon:YIELD_GOLD] Gold per Age on Unique Buildings and Improvements.'
-    WHERE Tag = 'LOC_LEADER_XERXES_ALT_DESCRIPTION';
-
-    UPDATE LocalizedText
-    SET Text = '[LIST][LI][B]+1 Trade Route [/B]limit with all other Leaders.[LI]Gain [B]50 [icon:YIELD_CULTURE] Culture [/B]and [B]100[icon:YIELD_GOLD] Gold [/B]per Age when you create a [B]Trade Route [/B]or [B]Road[/B].[LI][B]+1[icon:YIELD_GOLD] [B]Gold [/B]per Age on [B]Unique Buildings [/B]and [B]Improvements[/B].[/LIST]'
-    WHERE Tag = 'LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_DESCRIPTION';
-
     UPDATE LocalizedText
     SET Text = '+3 Combat Strength for Units that are attacking in neutral or enemy territory. Gain 50 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age when you capture a Settlement for the first time. +10% [icon:YIELD_GOLD] Gold in all Settlements. This is doubled in Settlements not founded by you. +1 Settlement Limit per Age.'
     WHERE Tag = 'LOC_LEADER_XERXES_DESCRIPTION';

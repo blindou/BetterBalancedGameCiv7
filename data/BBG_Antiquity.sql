@@ -56,19 +56,6 @@
 --========================================================================================================================
 --========================================================================================================================
 
---========================================================================================================================
--- Greece
---========================================================================================================================
-	UPDATE ModifierArguments
-	SET	Value = 5
-	WHERE ModifierId = 'ATTACH_GREECE_ACROPOLIS_PARTHENON_GOLD_PER_SUZERAIN' and name = 'Amount';
-
-	UPDATE ModifierArguments
-	SET	Value = 5
-	WHERE ModifierId = 'MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT' and name = 'Amount';
---========================================================================================================================
---========================================================================================================================
-
 --========================================================================================================================	
 -- Diplomacy
 --========================================================================================================================	
@@ -140,6 +127,10 @@
 	-- Egypt: T1 nav river
 	INSERT INTO StartBiasTerrains (CivilizationType, TerrainType, Score)
 	VALUES ('CIVILIZATION_EGYPT', 'TERRAIN_NAVIGABLE_RIVER', 150);
+
+	-- Egypt: T4 nav river
+	INSERT INTO StartBiasBiomes (CivilizationType, BiomeType, Score)
+	VALUES ('CIVILIZATION_EGYPT', 'BIOME_DESERT', 10);
 
 	-- Greece: T2 rough terrain
 	INSERT INTO StartBiasTerrains (CivilizationType, TerrainType, Score)

@@ -50,7 +50,6 @@
     UPDATE LocalizedText
     SET Text = "+5[icon:YIELD_GOLD] Gold on the Parthenon for each City-State you are Suzerain of."
     WHERE Tag = 'LOC_QUARTER_ACROPOLIS_TOOLTIP';
-
     UPDATE LocalizedText
     SET Text = "+5[icon:YIELD_CULTURE] Culture for each City-State you are Suzerain of."
     WHERE Tag = 'LOC_MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT_DESCRIPTION';

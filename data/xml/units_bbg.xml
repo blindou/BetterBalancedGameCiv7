@@ -8,6 +8,7 @@
     <UnitClass_Abilities>
         <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" UnitClassType="UNIT_CLASS_INFANTRY"/>
         <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" UnitClassType="UNIT_CLASS_INFANTRY"/>
+        <Row UnitAbilityType="ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG" UnitClassType="UNIT_CLASS_COMBAT"/>
     </UnitClass_Abilities>
     <UnitAbilities>
         <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" 
@@ -24,11 +25,11 @@
              Description="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_DESCRIPTION_BBG"/>
     </UnitAbilities>
     <UnitAbilityModifiers>
-        <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" 
-             ModifierId="FRIEDRICH_SCIENCE_INFANTRY_COMBAT_STRENGTH"/>
-        <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" 
-             ModifierId="FRIEDRICH_CULTURAL_INFANTRY_COMBAT_STRENGTH"/>
-        <Row UnitAbilityType="ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG" 
-             ModifierId="EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG"/>
+          <Row UnitAbilityType="ABILITY_FRIEDRICH_SCIENCE_INFANTRY" 
+               ModifierId="FRIEDRICH_SCIENCE_INFANTRY_COMBAT_STRENGTH"/>
+          <Row UnitAbilityType="ABILITY_FRIEDRICH_CULTURAL_INFANTRY" 
+               ModifierId="FRIEDRICH_CULTURAL_INFANTRY_COMBAT_STRENGTH"/>
+          <Row UnitAbilityType="ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG" 
+               ModifierId="EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG"/>
     </UnitAbilityModifiers>
 </Database>

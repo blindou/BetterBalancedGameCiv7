@@ -2,5 +2,10 @@
 <Database>
 	<UniqueQuarterModifiers>
 		<Row UniqueQuarterType="QUARTER_NECROPOLIS" ModifierId="MOD_EGYPT_NECROPOLIS_WONDER_PRODUCTION_BBG"/>
+		<Row UniqueQuarterType="QUARTER_ACROPOLIS" ModifierId="MOD_GREECE_ACROPOLIS_PARTHENON_GOLD_PER_SUZERAIN_BBG"/>
 	</UniqueQuarterModifiers>
+	<GameModifiers>
+		<Row ModifierId="MOD_EGYPT_NECROPOLIS_WONDER_PRODUCTION_BBG"/>
+		<Row ModifierId="MOD_GREECE_ACROPOLIS_PARTHENON_GOLD_PER_SUZERAIN_BBG"/>
+	</GameModifiers>
 </Database>

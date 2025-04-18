@@ -40,8 +40,8 @@
     </Modifier>
 
     
-	<Modifier id="EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG" collection="COLLECTION_UNIT_COMBAT" effect="EFFECT_ADJUST_UNIT_STRENGTH_MODIFIER">
-		<Argument name="Amount">3</Argument>
-		<String context="Preview">LOC_ABILITY_XERXES_COMBAT_PREVIEW</String>
-	</Modifier>
+    <Modifier id="EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_BBG" collection="COLLECTION_UNIT_COMBAT" effect="EFFECT_ADJUST_UNIT_STRENGTH_MODIFIER">
+        <Argument name="Amount">3</Argument>
+        <String context="Preview">LOC_ABILITY_EGYPT_COMBAT_PREVIEW</String>
+    </Modifier>
 </GameEffects>

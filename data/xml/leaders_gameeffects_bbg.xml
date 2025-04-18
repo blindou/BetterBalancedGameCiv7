@@ -41,7 +41,7 @@
 			<Requirement type="REQUIREMENT_GAME_IS_STARTED"/>
         </SubjectRequirements>
 		<Argument name="AttributeType">ATTRIBUTE_WILDCARD</Argument>
-		<Argument name="Amount">2</Argument>
+		<Argument name="Amount">1</Argument>
     </Modifier>
 	<Modifier id="PLUS_ONE_STATS_DURING_CELEBRATION_BBG" collection="COLLECTION_PLAYER_CITIES" effect="EFFECT_CITY_ADJUST_YIELD">
 		<SubjectRequirements>
