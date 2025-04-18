@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <LocalizedText>
+        <!--=====================================================================================================================
+        BBG Info
+        =======================================================================================================================-->
+        <Replace Tag="LOC_MODULE_BBG_DESCRIPTION" Language="fr_FR">
+            <Text>BBG - un mod pour un meilleur équilibrage du jeu de base.</Text>
+        </Replace>
+        <!--=====================================================================================================================
+        Minuterie
+        =======================================================================================================================-->
+        <Replace Tag="LOC_GAME_TURNPHASE_TYPE" Language="fr_FR">
+            <Text>Paramètres avancés de tour :</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS" Language="fr_FR">
+            <Text>Simultanés (par défaut)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_DESC" Language="fr_FR">
+            <Text>Paramètres par défaut pour les tours simultanés standard</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST" Language="fr_FR">
+            <Text>Minuterie dynamique rapide</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC" Language="fr_FR">
+            <Text>Minuterie dynamique rapide (15s base + 5s par ville + 1s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL" Language="fr_FR">
+            <Text>Minuterie dynamique normale</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC" Language="fr_FR">
+            <Text>Minuterie dynamique normale (20s base + 5s par ville + 3s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Language="fr_FR">
+            <Text>Minuterie dynamique normale + Attente</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC" Language="fr_FR">
+            <Text>Minuterie dynamique normale avec une pause de 1s avant et après le tour</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FASTER" Language="fr_FR">
+            <Text>Simultanés, plus rapide.</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_DYNAMIC" Language="fr_FR">
+            <Text>Hybride</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT" Language="fr_FR">
+            <Text>Simultanés +2s d'attente (expérimental)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_WAIT_FASTER" Language="fr_FR">
+            <Text>Simultanés, plus rapide +2s d'attente (expérimental)</Text>
+        </Replace>
+        <Replace Tag="LOC_GAME_TURNPHASE_DESC" Language="fr_FR">
+            <Text>Simultanés — paramètre par défaut pour les tours simultanés standard.[n] [n]
+
+                Hybride — simultané en temps de paix, séquentiel en temps de guerre.[n] [n]
+
+                Minuterie dynamique rapide — les joueurs jouent simultanément avec une minuterie dynamique plus rapide (15s de base + 5s par ville + 1s par unité).[n] [n]
+
+                Minuterie dynamique normale — les joueurs jouent simultanément avec une minuterie dynamique standard (20s de base + 5s par ville + 3s par unité).[n] [n]
+
+                Minuterie dynamique normale + attente — identique à la minuterie dynamique normale, mais inclut une pause d'une seconde avant et après chaque tour. Cela peut aider à réduire les désynchronisations.[n] [n]
+            </Text>
+        </Replace>
+        <Replace Tag="LOC_WAIT_PHASE" Language="fr_FR">
+            <Text>Pause</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Tecumseh
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_TECUMSEH_DESCRIPTION" Language="fr_FR">
+            <Text>+2 de [icon:YIELD_FOOD] nourriture et de [icon:YIELD_PRODUCTION] production par ère dans les établissements pour chaque cité-état dont vous êtes le suzerain. +1 à la puissance de combat de toutes les unités pour chaque cité-état dont vous êtes le suzerain.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_TECUMSEH_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+2 de [icon:YIELD_FOOD] nourriture [/B]et de [icon:YIELD_PRODUCTION] [B]production [/B]par ère dans les [B]établissements [/B]pour chaque [B]cité-état[/B] dont vous êtes le [B]suzerain[/B].[LI][B]+1 à la puissance de combat [/B]de toutes les unités pour chaque [B]cité-état[/B] dont vous êtes le [B]suzerain[/B].[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Hatchepsout
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_HATSHEPSUT_DESCRIPTION" Language="fr_FR">
+            <Text>+1 de [icon:YIELD_CULTURE] culture et +1 [icon:YIELD_GOLD] d'or pour chaque ressource importée.[LI]+15% de [icon:YIELD_PRODUCTION] production lors de la construction de bâtiments et de merveilles dans les villes adjacentes aux fleuves navigables.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+1 de [icon:YIELD_CULTURE] culture et +1 [icon:YIELD_GOLD] d'or [/B]pour chaque [B]ressource[/B] importée.[LI][B]+15% de [icon:YIELD_PRODUCTION] production [/B]lors de la construction de [B]bâtiments [/B]et de [B]merveilles [/B]dans les [B]villes[/B] adjacentes aux [B]fleuves navigables[/B].[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Isabelle
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_ISABELLA_DESCRIPTION" Language="fr_FR">
+            <Text>Vous recevez 150 [icon:YIELD_GOLD] d'or pour chaque merveille naturelle que vous découvrez. Le montant est doublé si la merveille naturelle se trouve dans des terres lointaines. +100% de rendement sur les cases contenant des merveilles naturelles. +50% [icon:YIELD_GOLD] d'or pour l'achat d'unités navales. -1 [icon:YIELD_GOLD] d'or pour l'entretien des unités navales.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_ISABELLA_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Vous recevez [B]150 [icon:YIELD_GOLD] d'or [/B]pour chaque [B]merveille naturelle [/B]que vous découvrez. Le montant est [B]doublé [/B]si la [B]merveille naturelle [/B]se trouve dans des [B]terres lointaines[/B]. [B]+100% de rendement [/B]sur les cases contenant des [B]merveilles naturelles[/B].[LI][B]+50% [icon:YIELD_GOLD] d'or [/B]pour l'achat d'[B]unités navales[/B].[LI][B]-1 [icon:YIELD_GOLD] d'or [/B]pour l'entretien des [B]unités navales[/B].[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Pachacuti
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_PACHACUTI_DESCRIPTION" Language="fr_FR">
+            <Text>Tous les bâtiments reçoivent +1 de [icon:YIELD_FOOD] nourriture pour la proximité avec les montagnes. Les quartiers reçoivent +1 [icon:YIELD_SCIENCE] de science et +1 [icon:YIELD_GOLD] d'or s'ils sont situés près d'une montagne. Les spécialistes situés près des montagnes ne paient pas de [icon:YIELD_HAPPINESS] bonheur pour l'entretien.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_PACHACUTI_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Tous les bâtiments reçoivent [B]+1 de [icon:YIELD_FOOD] nourriture pour les [B]montagnes[/B]. Les quartiers reçoivent [B]+1 [icon:YIELD_SCIENCE] de science [/B]et [B]+1 [icon:YIELD_GOLD] d'or [/B]s'ils sont situés près d'[B]une montagne[/B]. [LI]Les [B]spécialistes[/B] situés près des [B]montagnes[/B] ne paient pas de [icon:YIELD_HAPPINESS] [B]bonheur[/B] pour l'entretien.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Frédéric
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_FRIEDRICH_DESCRIPTION" Language="fr_FR">
+            <Text>Les commandants d'armée commencent le jeu avec la promotion "Vertu", qui donne à l'unité +1 au rayon de la zone de commandement. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment militaire ou scientifique.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_FRIEDRICH_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Les [B]commandants d'armée [/B]commencent le jeu avec la [B]promotion "Vertu"[/B], qui donne à l'unité [B]+1 au rayon de la zone de commandement[/B].[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment scientifique[/B].[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_LEADER_FRIEDRICH_ALT_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez un chef-d'œuvre lors de la première capture d'un établissement. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment culturel.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_FRIEDRICH_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Recevez un [B]chef-d'œuvre [/B]lors de la première capture d'un établissement.[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment culturel[/B].[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_NAME" Language="fr_FR">
+            <Text>Formation culturelle d'infanterie</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_DESCRIPTION" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités d'infanterie formées dans des bâtiments culturels.</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_NAME" Language="fr_FR">
+            <Text>Formation scientifique d'infanterie</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_DESCRIPTION" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités d'infanterie formées dans des bâtiments scientifiques.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Napoléon, Révolutionnaire
+        ===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_NAPOLEON_ALT_DESCRIPTION" Language="fr_FR">
+            <Text>+1 de déplacement pour toutes les unités terrestres. La victoire contre une unité ennemie donne de la [icon:YIELD_CULTURE] culture à hauteur de 50% de sa puissance de combat. +5 de puissance de combat pour les unités de siège.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_NAPOLEON_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+1 de déplacement [/B]pour toutes les [B]unités terrestres[/B].[LI]La victoire contre une unité ennemie donne de la [icon:YIELD_CULTURE] [B]culture [/B]à hauteur de [B]50% [/B]de sa [B]puissance de combat[/B]. [B]+5 de puissance de combat [/B]pour les unités de siège.[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_NAPOLEON_ALT_SIEGE_COMBAT_STR" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités de siège.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Égypte
+        =======================================================================================================================-->
+        <Replace Tag="LOC_NILE_LEGACY_DESCRIPTION" Language="fr_FR">
+            <Text>+2 de [icon:YIELD_PRODUCTION] production sur les fleuves navigables.</Text>
+        </Replace>
+        <Replace Tag="LOC_NILE_LEGACY_NAME" Language="fr_FR">
+            <Text>Héritage du Nil</Text>
+        </Replace>
+        <Replace Tag="LOC_MOD_PERIPLUS_OF_THE_ERYTHRAEAN_SEA_RESOURCE_CAP_DESCRIPTION" Language="fr_FR">
+            <Text>+2 aux cases de ressources des établissements sur les côtes ou les fleuves navigables.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Maya
+        =======================================================================================================================-->
+        <Replace Tag="LOC_QUARTER_UWAYBIL_KUH_DESCRIPTION" Language="fr_FR">
+            <Text>Quartier unique des Mayas. Pour le créer, construisez Jalav et Ku Na dans un même district. Lorsque vous recherchez une technologie, cet établissement reçoit 5% de son coût en [icon:YIELD_PRODUCTION] production.</Text>
+        </Replace>
+        <Replace Tag="LOC_QUARTER_UWAYBIL_KUH_TOOLTIP" Language="fr_FR">
+            <Text>Lorsque vous recherchez une technologie, cet établissement reçoit 5% de son coût en [icon:YIELD_PRODUCTION] production.</Text>
+        </Replace>
+        <Replace Tag="LOC_BUILDING_KUH_NAH_DESCRIPTION" Language="fr_FR">
+            <Text>+3 de [icon:YIELD_SCIENCE] science. Bonus de voisinage +1 de [icon:YIELD_SCIENCE] science pour les merveilles. Bâtiment scientifique unique des Mayas. Ne devient pas obsolète.</Text>
+        </Replace>
+        <Replace Tag="LOC_BUILDING_KUH_NAH_TOOLTIP" Language="fr_FR">
+            <Text>Bâtiment scientifique unique des Mayas. Ne devient pas obsolète.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Perse
+        =======================================================================================================================-->
+        <Replace Tag="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Language="fr_FR">
+            <Text>+1 [icon:YIELD_CULTURE] de culture et +3 [icon:YIELD_GOLD] d'or. Amélioration unique de la Perse. Ne devient pas obsolète. Ne supprime pas les bonus de l'entrepôt sur la case. Ne peut pas être placé à côté d'un autre jardin Pairidaeza.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Souvenirs
+        =======================================================================================================================-->
+        <Replace Tag="LOC_MEMENTO_FOUNDATION_LYDIAN_LION_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>+50 [icon:YIELD_GOLD] d'or par ère au début de l'ère.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_BENJAMIN_FRANKLIN_BIFOCALS_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez +15 [icon:YIELD_DIPLOMACY] d'influence après avoir amélioré une technologie ou maîtrisé une doctrine.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_FOUNDATION_IMAGO_MUNDI_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>+2 à la vision pour les capacités d'éclaireur "Recherche" et "Sentinelle".</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_CHALCEDONY_SEAL_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>Si vous avez 3 ou plus de bâtiments et améliorations uniques, chacun procure +1 [icon:YIELD_CULTURE] de culture et +1 [icon:YIELD_GOLD] d'or.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_BATTUTA_MERCHANTS_SADDLE_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>+1 de déplacement pour les commerçants et les colons.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_FOUNDATION_SHISA_NECKLACE_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez 50 [icon:YIELD_DIPLOMACY] d'influence lorsque vous devenez suzerain d'une cité-état.</Text>
+        </Replace>
+        <!--========================================================================================================================	
+        Changement de traditions
+        =======================================================================================================================-->
+        <!--========================================================================================================================	
+        Mississippi
+        =======================================================================================================================-->
+        <Replace Tag="LOC_TRADITION_SHELL_TEMPERED_POTTERY_DESCRIPTION" Language="fr_FR">
+            <Text>Tous les bâtiments reçoivent +5 [icon:YIELD_GOLD] d'or pour le voisinage avec des ressources.</Text>
+        </Replace>
+    </LocalizedText>
+</Database>
