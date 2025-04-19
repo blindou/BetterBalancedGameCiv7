@@ -22,7 +22,6 @@
 --========================================================================================================================
 --========================================================================================================================
 
-
 --========================================================================================================================	
 -- Pachacuti 
 --========================================================================================================================
@@ -197,5 +196,24 @@
     UPDATE LocalizedText 
     SET Text = 'Gain 50[icon:YIELD_DIPLOMACY] Influence when you become Suzerain of a City-State.'
     WHERE Tag = 'LOC_MEMENTO_FOUNDATION_SHISA_NECKLACE_FUNCTIONAL_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Greece
+--========================================================================================================================
+    INSERT OR REPLACE INTO LocalizedText 
+        (Language, Tag, Text) VALUES
+        ('en_US', 'LOC_ABILITY_HOPLITE_VS_CAVALRY_PREVIEW', '+3 combat str vs Cav.');
+
+    UPDATE LocalizedText
+    SET Text = "Greek Unique Quarter. Created by constructing the Odeon and Parthenon in the same District. +5[icon:YIELD_GOLD] Gold on the Parthenon for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_QUARTER_ACROPOLIS_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "+5[icon:YIELD_GOLD] Gold on the Parthenon for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_QUARTER_ACROPOLIS_TOOLTIP';
+    UPDATE LocalizedText
+    SET Text = "+5[icon:YIELD_CULTURE] Culture for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
