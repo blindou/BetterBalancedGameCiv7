@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+    <LocalizedText>
+        <!--=====================================================================================================================
+        BBG Info
+        =======================================================================================================================-->
+        <Replace Tag="LOC_MODULE_BBG_NAME" Language="fr_FR">
+            <Text>Better Balanced Game</Text>
+        </Replace>
+        <Replace Tag="LOC_MODULE_BBG_DESCRIPTION" Language="fr_FR">
+            <Text>BBG - un mod pour améliorer équilibrage du jeu de base.</Text>
+        </Replace>
+        <!--=====================================================================================================================
+        Chronomètre
+        =======================================================================================================================-->
+        <Replace Tag="LOC_GAME_TURNPHASE_TYPE" Language="fr_FR">
+            <Text>Paramètres avancés du tour :</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS" Language="fr_FR">
+            <Text>Simultanés (par défaut)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_DESC" Language="fr_FR">
+            <Text>Paramètres par défaut pour les tours simultanés standard</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_TURBO" Language="fr_FR">
+            <Text>Chronomètre dynamique turbo</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_TURBO_DESC" Language="fr_FR">
+            <Text>Chronomètre dynamique turbo (45s de base + 5s par ville + 0,5s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST" Language="fr_FR">
+            <Text>Chronomètre dynamique rapide</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_FAST_DESC" Language="fr_FR">
+            <Text>Chronomètre dynamique rapide (60s base + 5s par ville + 1s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL" Language="fr_FR">
+            <Text>Chronomètre dynamique normale</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_DESC" Language="fr_FR">
+            <Text>Chronomètre dynamique normale (30s base + 5s par ville + 3s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT" Language="fr_FR">
+            <Text>Chronomètre dynamique décontractée</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_NORMAL_WAIT_DESC" Language="fr_FR">
+            <Text>Chronomètre dynamique décontractée (45s base + 5s par ville + 3s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_CASUAL" Language="fr_FR">
+            <Text>Chronomètre dynamique décontractée</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_SIMULTANEOUS_CASUAL_DESC" Language="fr_FR">
+            <Text>Chronomètre dynamique décontractée (45s base + 5s par ville + 3s par unité)</Text>
+        </Replace>
+        <Replace Tag="LOC_TURNPHASE_DYNAMIC" Language="fr_FR">
+            <Text>Hybride</Text>
+        </Replace>
+        <Replace Tag="LOC_GAME_TURNPHASE_DESC" Language="fr_FR">
+            <Text>Simultanés — paramètre par défaut pour les tours simultanés standard.[n] [n]
+
+                Hybride — simultané en temps de paix, séquentiel en temps de guerre.[n] [n]
+
+                Chronomètre dynamique turbo — les joueurs jouent simultanément avec une Chronomètre dynamique très rapide (45s de base + 5s par ville + 0.5s par unité).[n] [n]
+
+                Chronomètre dynamique rapide — les joueurs jouent simultanément avec une Chronomètre dynamique rapide (60s de base + 5s par ville + 1s par unité).[n] [n]
+
+                Chronomètre dynamique normale — les joueurs jouent simultanément avec une Chronomètre dynamique standard (30s de base + 5s par ville + 3s par unité).[n] [n]
+
+                Chronomètre dynamique décontractée — les joueurs jouent simultanément avec une Chronomètre dynamique tranquille (45s de base + 5s par ville + 3s par unité).[n] [n]
+            </Text>
+        </Replace>
+        <Replace Tag="LOC_WAIT_PHASE" Language="fr_FR">
+            <Text>Pause</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Tecumseh
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_TECUMSEH_DESCRIPTION" Language="fr_FR">
+            <Text>+2 de [icon:YIELD_FOOD] nourriture et de [icon:YIELD_PRODUCTION] production par ère dans les colonies pour chaque cité-état dont vous êtes le suzerain. +1 à la puissance de combat de toutes les unités pour chaque cité-état dont vous êtes le suzerain.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_TECUMSEH_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+2 de [icon:YIELD_FOOD] nourriture [/B]et de [icon:YIELD_PRODUCTION] [B]production [/B]par ère dans les [B]colonies [/B]pour chaque [B]cité-état[/B] dont vous êtes le [B]suzerain[/B].[LI][B]+1 à la puissance de combat [/B]de toutes les unités pour chaque [B]cité-état[/B] dont vous êtes le [B]suzerain[/B].[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Hatchepsout
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_HATSHEPSUT_DESCRIPTION" Language="fr_FR">
+            <Text>+1 de [icon:YIELD_CULTURE] culture et +1 [icon:YIELD_GOLD] d'or pour chaque ressource importée.[LI]+15% de [icon:YIELD_PRODUCTION] production lors de la construction de bâtiments et de merveilles dans les villes adjacentes aux fleuves navigables. Les ressources près des fleuves reçoivent +1 [icon:YIELD_GOLD] d'or et [icon:YIELD_CULTURE] de culture.</Text>        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+1 de [icon:YIELD_CULTURE] culture et +1 [icon:YIELD_GOLD] d'or [/B]pour chaque [B]ressource[/B] importée.[LI][B]+15% de [icon:YIELD_PRODUCTION] production [/B]lors de la construction de [B]bâtiments [/B]et de [B]merveilles [/B]dans les [B]villes[/B] adjacentes aux [B]fleuves navigables[/B]. [LI]Les ressources près des fleuves reçoivent +1 [icon:YIELD_GOLD] d'or et [icon:YIELD_CULTURE] de culture.[/LIST]</Text>        </Replace>
+        <!--========================================================================================================================
+        Pachacuti
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_PACHACUTI_DESCRIPTION" Language="fr_FR">
+            <Text>Tous les bâtiments reçoivent +1 de [icon:YIELD_FOOD] nourriture pour la proximité avec les montagnes. Les quartiers reçoivent +1 [icon:YIELD_SCIENCE] de science et +1 [icon:YIELD_GOLD] d'or s'ils sont situés près d'une montagne. Les spécialistes situés près des montagnes ne paient pas de [icon:YIELD_HAPPINESS] bonheur pour l'entretien.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_PACHACUTI_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Tous les bâtiments reçoivent [B]+1 de [icon:YIELD_FOOD] nourriture pour les [B]montagnes[/B]. Les quartiers reçoivent [B]+1 [icon:YIELD_SCIENCE] de science [/B]et [B]+1 [icon:YIELD_GOLD] d'or [/B]s'ils sont situés près d'[B]une montagne[/B]. [LI]Les [B]spécialistes[/B] situés près des [B]montagnes[/B] ne paient pas de [icon:YIELD_HAPPINESS] [B]bonheur[/B] pour l'entretien.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Frédéric
+        =======================================================================================================================-->
+        <Replace Tag="LOC_LEADER_FRIEDRICH_DESCRIPTION" Language="fr_FR">
+            <Text>Les commandants d'armée commencent le jeu avec la promotion "Vertu", qui donne à l'unité +1 au rayon de la zone de commandement. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment militaire ou scientifique.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_FRIEDRICH_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Les [B]commandants d'armée [/B]commencent le jeu avec la [B]promotion "Vertu"[/B], qui donne à l'unité [B]+1 au rayon de la zone de commandement[/B].[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment scientifique[/B].[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_LEADER_FRIEDRICH_ALT_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez un chef-d'œuvre lors de la première capture d'une colonie. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment culturel.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_FRIEDRICH_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Recevez un [B]chef-d'œuvre [/B]lors de la première capture d'une colonie.[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment culturel[/B].[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_NAME" Language="fr_FR">
+            <Text>Formation culturelle d'infanterie</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_CULTURAL_INFANTRY_DESCRIPTION" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités d'infanterie formées dans des bâtiments culturels.</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_NAME" Language="fr_FR">
+            <Text>Formation scientifique d'infanterie</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_FRIEDRICH_SCIENCE_INFANTRY_DESCRIPTION" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités d'infanterie formées dans des bâtiments scientifiques.</Text>
+        </Replace>
+        <!--========================================================================================================================
+Ибн
+===========================================================================================================================-->
+        <Replace Tag="LOC_IBN_BATTUTA_MOD_EX_WILDCARD_ATTRIBUTE_DESCRIPTION" Language="fr_FR">
+            <Text>+3 points d'attributs universels.</Text>
+        </Replace>
+        <Replace Tag="LOC_IBN_BATTUTA_MOD_MO_WILDCARD_ATTRIBUTE_DESCRIPTION" Language="fr_FR">
+            <Text>+3 points d'attributs universels.</Text>
+        </Replace>
+        <Replace Tag="LOC_LEADER_IBN_BATTUTA_DESCRIPTION" Language="fr_FR">
+            <Text>Obtient 3 points d'attributs universels pour chaque première doctrine sociale de l'ère. +1 à la vision de toutes les unités. Obtient l'initiative unique "Cartes commerciales", qui vous révèle progressivement les territoires occupés par les autres leaders.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Obtient [B]3 points d'attributs universels [/B]pour chaque première [B]doctrine sociale [/B]de l'ère.[LI][B]+1 à la vision [/B]de toutes les unités.[LI]Obtient l'[B]initiative unique[/B] [B]"Cartes commerciales"[/B], qui vous révèle progressivement les [B]territoires occupés[/B] par les autres leaders.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        José
+        ===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_JOSE_RIZAL_DESCRIPTION" Language="fr_FR">
+            <Text>Lors de la réception des récompenses pour l'exécution des événements historiques, vous recevez des récompenses supplémentaires de [B]20 [icon:YIELD_CULTURE] culture [/B]et [B]100 [icon:YIELD_GOLD] d'or [/B]par ère. Vous avez des événements de l'histoire supplémentaires. [B]+50% [/B]à la durée des festivités. [B]+50% [icon:YIELD_HAPPINESS] satisfaction [/B]pour les festivités. [B]+1 [/B]à toutes les caractéristiques dans les villes pendant les festivités, [B]s'adapte [/B]avec l'âge du jeu.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_JOSE_RIZAL_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Lors de la réception des récompenses pour l'exécution des événements de l'histoire, vous recevez des récompenses supplémentaires de [B]20 [icon:YIELD_CULTURE] culture [/B]et [B]100 [icon:YIELD_GOLD] d'or [/B]par ère.[LI]Vous avez des événements de l'histoire supplémentaires.[LI][B]+50% [/B]à la durée des festivités.[LI][B]+50% [icon:YIELD_HAPPINESS] bonheur [/B]pour les festivités.[LI][B]+1 [/B]à toutes les caractéristiques dans les villes pendant les festivités, [B]s'adapte [/B]avec l'âge du jeu.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Simeon
+        ===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_BOLIVAR_DESCRIPTION" Language="fr_FR">
+            <Text>Obtenez 2 soutiens gratuits dans vos guerres. Lorsque vous capturez votre première ville, elle peut acheter 1 bâtiment gratuitement. Les troubles ne gênent pas l'achat.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_BOLIVAR_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Obtenez [B]2 soutiens gratuits [/B]dans vos guerres.[LI]Lorsque vous capturez votre première ville, elle peut acheter 1 bâtiment gratuitement.[LI]Les troubles ne gênent pas l'achat.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Xerxes
+        ===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_XERXES_ALT_DESCRIPTION" Language="fr_FR">
+            <Text>+1 à la limite de routes commerciales avec tous les leaders. Recevez +50 de [icon:YIELD_CULTURE] culture et +100 [icon:YIELD_GOLD] d'or pour chaque ère lorsque vous créez une route commerciale ou une route. +1 [icon:YIELD_GOLD] d'or par ère dans les bâtiments et améliorations uniques.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+1 à la limite de routes commerciales [/B]avec tous les leaders.[LI]Recevez [B]50 [icon:YIELD_CULTURE] de culture [/B]et [B]100 [icon:YIELD_GOLD] d'or [/B]pour chaque ère lorsque vous créez une [B]route commerciale [/B]ou une [B]route[/B].[LI][B]+1 [icon:YIELD_GOLD] d'or [/B]par ère dans les [B]bâtiments uniques [/B]et les [B]améliorations[/B].[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_LEADER_XERXES_DESCRIPTION" Language="fr_FR">
+            <Text>+3 à la puissance de combat des unités attaquant sur un territoire neutre ou ennemi. Recevez +50 de [icon:YIELD_CULTURE] culture et [icon:YIELD_GOLD] d'or pour la premiere colonie que vous capturez dans chaque ère. +10% [icon:YIELD_GOLD] d'or dans toutes les colonies. Ce bonus est doublé pour les colonies que vous n'avez pas fondés. +1 à la limite d'colonies par ère.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_XERXES_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+3 à la puissance de combat [/B]des unités [B]attaquant [/B]sur un territoire neutre ou ennemi.[LI]Recevez [B]+50 de [icon:YIELD_CULTURE] culture [/B]et [icon:YIELD_GOLD] [B]d'or [/B]pour la premier colonie que vous capturez dans chaque ère.[LI][B]+10% [icon:YIELD_GOLD] d'or [/B]dans toutes les colonies. Ce bonus est [B]doublé [/B]pour les colonies que vous n'avez pas fondés.[LI][B]+1 à la limite de colonies [/B]par ère.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Napoléon, Révolutionnaire
+        ===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_NAPOLEON_ALT_DESCRIPTION" Language="fr_FR">
+            <Text>+1 de déplacement pour toutes les unités terrestres. La victoire contre une unité ennemie donne de la [icon:YIELD_CULTURE] culture à hauteur de 50% de sa puissance de combat. +5 de puissance de combat pour les unités de siège.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_NAPOLEON_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI][B]+1 de déplacement [/B]pour toutes les [B]unités terrestres[/B].[LI]La victoire contre une unité ennemie donne de la [icon:YIELD_CULTURE] [B]culture [/B]à hauteur de [B]50% [/B]de sa [B]puissance de combat[/B]. [B]+5 de puissance de combat [/B]pour les unités de siège.[/LIST]</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_NAPOLEON_ALT_SIEGE_COMBAT_STR" Language="fr_FR">
+            <Text>+5 de puissance de combat pour les unités de siège.</Text>
+        </Replace>
+        <!--========================================================================================================================
+		Napoléon
+		===========================================================================================================================-->
+        <Replace Tag="LOC_LEADER_NAPOLEON_DESCRIPTION" Language="fr_FR">
+            <Text>Obtient une sanction unique "Système continental", qui réduit de 1 le nombre de routes commerciales entre vous et les autres chefs de faction. Dégrade les relations, et le coût d'annulation de la sanction augmente. +16 [icon:YIELD_GOLD] d'or par ère pour chaque chef de faction qui vous déteste ou vous hait. Vous pouvez annuler les initiatives gratuitement.</Text>
+        </Replace>
+        <Replace Tag="LOC_TRAIT_LEADER_NAPOLEON_ABILITY_DESCRIPTION" Language="fr_FR">
+            <Text>[LIST][LI]Obtient une sanction unique [B]"Système continental", [/B]qui réduit de 1 le nombre de routes commerciales entre vous et les autres chefs de faction.[LI]Dégrade les relations, et le coût d'annulation de la sanction augmente.[LI][B]+16 [icon:YIELD_GOLD] d'or [/B]par ère pour chaque chef de faction qui vous déteste ou vous hait.[LI]Vous pouvez annuler les initiatives gratuitement.[/LIST]</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Égypte
+        =======================================================================================================================-->
+        <Replace Tag="LOC_NILE_LEGACY_DESCRIPTION" Language="fr_FR">
+            <Text>+2 de [icon:YIELD_PRODUCTION] production sur les fleuves navigables.</Text>
+        </Replace>
+        <Replace Tag="LOC_NILE_LEGACY_NAME" Language="fr_FR">
+            <Text>Héritage du Nil</Text>
+        </Replace>
+        <Replace Tag="LOC_MOD_PERIPLUS_OF_THE_ERYTHRAEAN_SEA_RESOURCE_CAP_DESCRIPTION" Language="fr_FR">
+            <Text>+2 aux cases de ressources des colonies sur les côtes ou les fleuves navigables.</Text>
+        </Replace>
+        <Replace Tag="LOC_QUARTER_NECROPOLIS_DESCRIPTION" Language="fr_FR">
+            <Text>Quartier unique des Égyptiens. Pour le créer, construisez dans un même district. Donne 100 [icon:YIELD_GOLD] d'or (à vitesse normale) après la construction de n'importe quelle merveille du monde dans cette ville. +25% de production pour les merveilles dans cette ville.</Text>
+        </Replace>
+        <Replace Tag="LOC_QUARTER_NECROPOLIS_TOOLTIP" Language="fr_FR">
+            <Text>Donne 100 [icon:YIELD_GOLD] d'or (à vitesse normale) après la construction de n'importe quelle merveille du monde dans cette ville. +25% de production pour les merveilles dans cette ville.</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_NAME_BBG" Language="fr_FR">
+            <Text>Puissance de combat sur les terres amicales</Text>
+        </Replace>
+        <Replace Tag="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_DESCRIPTION_BBG" Language="fr_FR">
+            <Text>+3 de puissance de combat sur les terres amicales.</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Perse
+        =======================================================================================================================-->
+        <Replace Tag="LOC_IMPROVEMENT_PAIRIDAEZA_DESCRIPTION" Language="fr_FR">
+            <Text>+1 [icon:YIELD_CULTURE] de culture et +3 [icon:YIELD_GOLD] d'or. Amélioration unique de la Perse. Ne devient pas obsolète. Ne supprime pas les bonus de l'entrepôt sur la case. Ne peut pas être placé à côté d'un autre jardin Pairidaeza.</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Grèce
+        =======================================================================================================================-->
+        <Replace Tag="LOC_ABILITY_HOPLITE_VS_CAVALRY_PREVIEW" Language="fr_FR">
+            <Text>+3 de puissance de combat contre la cavalerie.</Text>
+        </Replace>
+        <Replace Tag="LOC_QUARTER_ACROPOLIS_DESCRIPTION" Language="fr_FR">
+            <Text>Quartier unique des Grecs. Pour le créer, construisez Odeon et Parthénon dans un même district. +5 [icon:YIELD_GOLD] d'or par cité-état suzerain.</Text>
+        </Replace>
+        <Replace Tag="LOC_QUARTER_ACROPOLIS_TOOLTIP" Language="fr_FR">
+            <Text>+5 [icon:YIELD_GOLD] d'or par cité-état suzerain.</Text>
+        </Replace>
+        <Replace Tag="LOC_MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT_DESCRIPTION" Language="fr_FR">
+            <Text>+5 [icon:YIELD_CULTURE] de culture pour chaque cité-état dont vous êtes le suzerain.</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Souvenirs
+        =======================================================================================================================-->
+        <Replace Tag="LOC_MEMENTO_FOUNDATION_LYDIAN_LION_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>+50 [icon:YIELD_GOLD] d'or par ère au début de l'ère.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_BENJAMIN_FRANKLIN_BIFOCALS_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez +15 [icon:YIELD_DIPLOMACY] d'influence après avoir amélioré une technologie ou maîtrisé une doctrine.</Text>
+        </Replace>
+        <Replace Tag="LOC_MEMENTO_FOUNDATION_SHISA_NECKLACE_FUNCTIONAL_DESCRIPTION" Language="fr_FR">
+            <Text>Recevez 50 [icon:YIELD_DIPLOMACY] d'influence lorsque vous devenez suzerain d'une cité-état.</Text>
+        </Replace>
+        <!--========================================================================================================================
+        Changement de traditions
+        =======================================================================================================================-->
+        <!--========================================================================================================================
+        Khmer
+        =======================================================================================================================-->
+
+        <Replace Tag="LOC_TRADITION_KAMBU_MERA_DESCRIPTION" Language="fr_FR">
+            <Text>+100% [icon:YIELD_FOOD] nourriture et [icon:YIELD_HAPPINESS] bonheur pour le maintien des spécialistes. +1 [icon:YIELD_PRODUCTION] production des spécialistes.</Text>
+        </Replace>
+        <Replace Tag="LOC_MOD_CHAKRAVARTI_CAPITAL_GROWTH_DESCRIPTION" Language="fr_FR">
+            <Text>+50% vitesse de croissance à la capitale. -2 [icon:YIELD_HAPPINESS] bonheur dans toutes les autres villes.</Text>
+        </Replace>
+    </LocalizedText>
+</Database>

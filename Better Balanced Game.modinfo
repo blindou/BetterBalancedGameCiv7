@@ -163,6 +163,9 @@
 				<UpdateText>
 					<Item locale="ru_RU">Localization/ru_RU/ru_RU_Text.xml</Item>
 				</UpdateText>
+				<UpdateText>
+                    <Item locale="fr_FR">Localization/fr_FR/fr_FR_Text.xml</Item>
+                </UpdateText>
 			</Actions>
 		</ActionGroup>
 		<ActionGroup id="bbg-always-loc-changes" scope="game" criteria="always">
@@ -173,11 +176,15 @@
 				<UpdateText>
 					<Item locale="ru_RU">Localization/ru_RU/ru_RU_Text.xml</Item>
 				</UpdateText>
+				<UpdateText>
+                    <Item locale="fr_FR">Localization/fr_FR/fr_FR_Text.xml</Item>
+                </UpdateText>
 			</Actions>
 		</ActionGroup>
 	</ActionGroups>
 	<LocalizedText>
 		<File>Localization/en_us/ModuleText.xml</File>
 		<File>Localization/ru_RU/ru_RU_Text.xml</File>
+		<File>Localization/fr_FR/fr_FR_Text.xml</File>
 	</LocalizedText>
 </Mod>
