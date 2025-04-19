@@ -210,10 +210,10 @@
 		<Replace Tag="LOC_QUARTER_NECROPOLIS_TOOLTIP" Language="ru_RU">
 			<Text>Дает 100 ед. [icon:YIELD_GOLD] золота (на стандартной скорости) по завершении строительства любого чуда света в этом поселении. +25% к производству чудес в этом городе.</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_NAME_BBG" Language="ru_RU">
+		<Replace Tag="" Language="ru_RU">
 			<Text>Боевая мощь дружественной территории</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_NAME_BBG" Language="ru_RU">
+		<Replace Tag="LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_DESCRIPTION_BBG" Language="ru_RU">
 			<Text>+3 к боевой мощи на дружественной территории.</Text>
 		</Replace>
 		<!--========================================================================================================================	
