@@ -1,28 +1,35 @@
 --========================================================================================================================
 -- Egypt
--- Improved Spawn Bias for Navigable Rivers
 --========================================================================================================================
     UPDATE LocalizedText
     SET Text = '+2 Resource Capacity in Settlements on Coast or Navigable Rivers.'
     WHERE Tag = 'LOC_MOD_PERIPLUS_OF_THE_ERYTHRAEAN_SEA_RESOURCE_CAP_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = 'Egyptian Unique Quarter. Created by constructing the Mastaba and Mortuary Temple in the same District. Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% production towards wonders in this city.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = 'Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% production towards wonders in this city.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_TOOLTIP';
+
+    INSERT OR REPLACE INTO LocalizedText 
+        (Language, Tag, Text) VALUES
+        ('en_US', 'LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_NAME_BBG', 'Friendly Territory Combat Stregnth'),
+        ('en_US', 'LOC_ABILITY_EGYPT_FRIENDLY_TERRITORY_COMBAT_STRENGTH_DESCRIPTION_BBG', '+3 combat strength in friendly territory.');
 --========================================================================================================================
 --========================================================================================================================
 
 --========================================================================================================================
--- Mississippian
--- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
--- CHANGE IS NOW MOVED TO BBG_AntiquityPersistent_LOC.sql
+-- Khmer
 --========================================================================================================================
---    UPDATE LocalizedText
---    SET Text = "All Buildings receive a +.5[icon:YIELD_GOLD] Gold Adjacency for Resources."
---    WHERE Tag = 'LOC_TRADITION_SHELL_TEMPERED_POTTERY_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = '+50% Growth Rate in the Capital. -2[icon:YIELD_HAPPINESS] Happiness in every other City.'
+    WHERE Tag = 'LOC_MOD_CHAKRAVARTI_CAPITAL_GROWTH_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
 
 --========================================================================================================================
 -- Persia
--- Leader Trait +5 combat strength on attack (From +3) 
--- UI Pairidaeza +3 gold +1 culture (from +1 gold +1 culture) 
 --========================================================================================================================
     UPDATE LocalizedText
     SET Text = "+1[icon:YIELD_CULTURE] Culture and +3[icon:YIELD_GOLD] Gold. Persian Unique Improvement. Ageless. Does not remove Warehouse bonuses on a tile. Cannot be placed adjacent to another Pairidaeza."

@@ -7,15 +7,6 @@
 --========================================================================================================================
 --========================================================================================================================
 
--- --========================================================================================================================
--- -- Benjamin Franklin 
--- -- REMOVED - 50% production towards production buildings
--- --========================================================================================================================
--- 	delete from TraitModifiers
--- 	WHERE ModifierId = 'FRANKLIN_MOD_PRODUCTION_BUILDING_RATE' and TraitType = 'TRAIT_LEADER_BENJAMIN_FRANKLIN_ABILITY';
--- --========================================================================================================================
--- --========================================================================================================================
-
 --========================================================================================================================	
 -- Napoleon Emperor
 -- +16 gold for every unfriendly leader (from +8)
@@ -28,7 +19,6 @@
 
 --========================================================================================================================	
 -- Pachacuti
--- Increased Spawn Bias towards Mountains
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 100
@@ -41,7 +31,6 @@
 
 --========================================================================================================================	
 -- Tecumseh
--- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
 	UPDATE ModifierArguments
 	SET	Value = 2
@@ -54,7 +43,6 @@
 
 --========================================================================================================================	
 -- Hatshepsut
--- +1 culture / +1 gold from imported resources (from +1 culture)
 --========================================================================================================================
 	DELETE FROM TraitModifiers
 	where ModifierId = 'HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES' and TraitType = 'TRAIT_LEADER_HATSHEPSUT_ABILITY';
@@ -63,7 +51,6 @@
 
 --========================================================================================================================	
 -- Xerses, King of Kings
--- +50 culture / + 50 gold when capturing settlement (from +100 culture / +100 gold)
 --========================================================================================================================
 	UPDATE ModifierArguments
 	SET	Value = 50
@@ -76,7 +63,6 @@
 
 --========================================================================================================================	
 -- Frederick
--- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
 	DELETE FROM TraitModifiers 
 	WHERE TraitType = 'TRAIT_LEADER_FRIEDRICH_ABILITY' 
@@ -94,25 +80,34 @@
 
 --========================================================================================================================	
 -- Isabella
--- Receive 150g when discovering a natural wonder (From 300)
--- Greatly increased spawn bias towards natural wonders	
 --========================================================================================================================
 	UPDATE StartBiasTerrains
 	SET	Score = 2000
 	WHERE LeaderType = 'LEADER_ISABELLA';
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Ibn
+--========================================================================================================================
+	delete from TraitModifiers
+	WHERE ModifierId = 'IBN_BATTUTA_MOD_WILDCARD_ATTRIBUTE' and TraitType = 'TRAIT_LEADER_IBN_BATTUTA_ABILITY';
+--========================================================================================================================
+
+--========================================================================================================================	
+-- Simon
+--========================================================================================================================
+	UPDATE ModifierArguments
+	SET	Value = 2
+	WHERE ModifierId = 'BOLIVAR_MOD_WAR_SUPPORT_DEF' and name = 'Amount';	
 
 	UPDATE ModifierArguments
-	SET	Value = 150
-	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'Amount';		
-	UPDATE ModifierArguments
-	SET	Value = 150
-	WHERE ModifierId = 'ISABELLA_MOD_NATURAL_WONDER_DISCOVERY' and name = 'DistantLandBonus';	
+	SET	Value = 2
+	WHERE ModifierId = 'BOLIVAR_MOD_WAR_SUPPORT_AGGRO' and name = 'Amount';	
 --========================================================================================================================
 
 --========================================================================================================================
 --========================================================================================================================	
 -- War Support
--- Cities receive -1 happiness per negative war support (from -3) 
 --========================================================================================================================	
 	UPDATE WarWearinessEffects
 	SET	YieldReductionPerLevel = 1
@@ -129,10 +124,8 @@
 
 --========================================================================================================================
 
-
 --========================================================================================================================	
 -- Egypt
--- Add new tradition usable in exploration and modern (after playing egypt in antiquity) for +2 prod to navigable rivers
 --========================================================================================================================
 	INSERT INTO Types
 		(Type,					Kind)
@@ -169,11 +162,13 @@
 	INSERT INTO Warehouse_YieldChanges
 		(ID,						Age,			YieldType,		YieldChange,	NavigableRiverInCity)
 	VALUES	('EgyptNileLegacyNavigableRiverProduction',	'AGE_ANTIQUITY',	'YIELD_PRODUCTION',	'2',		'TRUE');
+
+	delete from TraditionModifiers
+	where TraditionType = 'TRADITION_RICHES_OF_THE_DUAT' and ModifierId = 'RICHES_OF_THE_DUAT_MOD_WONDER_PRODUCTION';
 --========================================================================================================================
 
 --========================================================================================================================	
 -- Mementos
--- Update Lydian Coin gold per age from 100 to 50
 --========================================================================================================================	
 	UPDATE ModifierArguments 
 	SET Value = '50'
@@ -184,26 +179,6 @@
 	SET Value = '15'
 	WHERE ModifierId = 'MEMENTO_BENJAMIN_FRANKLIN_BIFOCALS_MODIFIER' and name = 'Amount';
 
-	-- -- Update Imago Mundi sight bonus from +3 to +2
-	UPDATE UnitAbilities 
-	SET AbilityValue = '1'
-	WHERE UnitAbilityType = 'ABILITY_SCOUT_RANGE_INCREASE';
-
-	-- Update Chalcedony Seal yields from +3 to +1
-	UPDATE ModifierArguments 
-	SET Value = '1'
-	WHERE ModifierId IN (
-		'MEMENTO_XERXES_ACHAEMENID_CHALCEDONY_SEAL_MODIFIER_1',
-		'MEMENTO_XERXES_ACHAEMENID_CHALCEDONY_SEAL_MODIFIER_2'
-	) and name = 'Amount';
-
-	-- Remove scouts from Merchants Saddle
-	DELETE FROM ModifierArguments 
-	WHERE ModifierId IN (
-		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_1',
-		'MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_4'
-	);
-
 	-- Shisa Necklace down to 50 influence (From 100)
 	UPDATE ModifierArguments 
 	SET Value = 50
@@ -213,27 +188,141 @@
 --========================================================================================================================
 --========================================================================================================================
 
-
---========================================================================================================================	
--- Tradition changes
---========================================================================================================================
---========================================================================================================================
--- Mississippian
--- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
--- CHANGE MOVED HERE AS THE UNNERFED VERSION BECAME AVAILABLE AFTER ANTIQUITY TRANSITION
---========================================================================================================================
---	UPDATE Adjacency_YieldChanges
---	SET	YieldChange = 0.5
---	WHERE ID = 'ShellTemperedPotteryWildcardResourceGold';
-
-
-
 --========================================================================================================================
 -- Persia
--- UI Pairidaeza +3 gold +1 culture (from +1 gold +1 culture) 
---========================================================================================================================\
+--========================================================================================================================
     UPDATE Constructible_YieldChanges
 	SET	YieldChange = 3
 	WHERE ConstructibleType = 'IMPROVEMENT_PAIRIDAEZA' and YieldType = 'YIELD_GOLD';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Spawn Bias
+--========================================================================================================================
+	-- First, delete all existing bias entries for these leaders
+	-- StartBiasBiomes
+	DELETE FROM StartBiasBiomes 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasTerrains
+	DELETE FROM StartBiasTerrains 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasFeatureClasses
+	DELETE FROM StartBiasFeatureClasses 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasRivers
+	DELETE FROM StartBiasRivers 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasAdjacentToCoasts
+	DELETE FROM StartBiasAdjacentToCoasts 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasNaturalWonders
+	DELETE FROM StartBiasNaturalWonders 
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- StartBiasResources
+	DELETE FROM StartBiasResources
+	WHERE LeaderType IN (
+		'LEADER_AMINA', 'LEADER_ASHOKA', 'LEADER_CATHERINE', 'LEADER_CHARLEMAGNE',
+		'LEADER_CONFUCIUS', 'LEADER_HATSHEPSUT', 'LEADER_ISABELLA', 'LEADER_JOSE_RIZAL',
+		'LEADER_PACHACUTI', 'LEADER_TRUNG_TRAC', 'LEADER_XERXES', 'LEADER_HARRIET_TUBMAN',
+		'LEADER_XERXES_ALT'
+	);
+
+	-- Now add the new biases based on the provided specifications
+	-- T1: 150 - T2: 75 - T3: 25 - T4: 10
+
+	-- Amina: T2 plains + T2 Desert
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES 
+		('LEADER_AMINA', 'BIOME_PLAINS', 75),
+		('LEADER_AMINA', 'BIOME_DESERT', 75);
+
+	-- Ashoka: T2 Bias Wine
+	INSERT INTO StartBiasResources (LeaderType, ResourceType, Score)
+	VALUES ('LEADER_ASHOKA', 'RESOURCE_WINE', 75);
+
+	-- Catherine: T1 Tundra
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES ('LEADER_CATHERINE', 'BIOME_TUNDRA', 150);
+
+	-- Charlemagne: T4 Grasslands
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES ('LEADER_CHARLEMAGNE', 'BIOME_GRASSLAND', 10);
+
+	-- Confucius: T4 River
+	INSERT INTO StartBiasRivers (LeaderType, Score)
+	VALUES ('LEADER_CONFUCIUS', 10);
+
+	-- Hatshepsut: T1 Nav River + T4 Desert
+	INSERT INTO StartBiasTerrains (LeaderType, TerrainType, Score)
+	VALUES ('LEADER_HATSHEPSUT', 'TERRAIN_NAVIGABLE_RIVER', 150);
+
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES ('LEADER_HATSHEPSUT', 'BIOME_DESERT', 10);
+
+	-- Isabella: T0 Wonders (highest bias)
+	INSERT INTO StartBiasNaturalWonders (LeaderType, Score)
+	VALUES ('LEADER_ISABELLA', 2000);
+
+	-- Jose: T2 Bias Wine
+	INSERT INTO StartBiasResources (LeaderType, ResourceType, Score)
+	VALUES ('LEADER_JOSE_RIZAL', 'RESOURCE_WINE', 75);
+
+	-- Pachacuti: T1 Mountain Bias
+	INSERT INTO StartBiasTerrains (LeaderType, TerrainType, Score)
+	VALUES ('LEADER_PACHACUTI', 'TERRAIN_MOUNTAIN', 150);
+
+	-- Trung Trac: T3 Tropic + T4 Vegetated
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES ('LEADER_TRUNG_TRAC', 'BIOME_TROPICAL', 25);
+
+	INSERT INTO StartBiasFeatureClasses (LeaderType, FeatureClassType, Score)
+	VALUES ('LEADER_TRUNG_TRAC', 'FEATURE_CLASS_VEGETATED', 10);
+
+	-- Xerxes: T4 Desert
+	INSERT INTO StartBiasBiomes (LeaderType, BiomeType, Score)
+	VALUES 
+		('LEADER_XERXES', 'BIOME_DESERT', 10),
+		('LEADER_XERXES_ALT', 'BIOME_DESERT', 10);
+
+	-- Tubman: T4 Vegetated
+	INSERT INTO StartBiasFeatureClasses (LeaderType, FeatureClassType, Score)
+	VALUES ('LEADER_HARRIET_TUBMAN', 'FEATURE_CLASS_VEGETATED', 10);
 --========================================================================================================================
 --========================================================================================================================

@@ -1,15 +1,5 @@
--- --========================================================================================================================
--- -- Benjamin Franklin 
--- --========================================================================================================================
--- UPDATE LocalizedText
--- SET Text = '<Text>[LIST][LI][B]+1 [icon:YIELD_SCIENCE] Science [/B]per Age on [B]Production Buildings [/B]in Cities.[LI][B]+1 [icon:YIELD_SCIENCE] Science [/B]per Age from active [B]Endeavors [/B]you started or supported.[LI]Can have two [B]Endeavors [/B] of the same type active at a time.[/LIST]</Text>'
--- WHERE Tag = 'LOC_IMPROVEMENT_TERRACE_FARM_DESCRIPTION';
--- --========================================================================================================================
--- --========================================================================================================================
-
 --========================================================================================================================	
 -- Tecumseh
--- +2 food / +2 production per CS you are Suz of (from +1 food / +1 production)
 --========================================================================================================================
     UPDATE LocalizedText
     SET Text = '[LIST][LI][B]+2 [icon:YIELD_FOOD] Food [/B]and [icon:YIELD_PRODUCTION] [B]Production [/B]per Age in [B]Settlements [/B]for every [B]City-State [/B]you are [B]Suzerain [/B]of.[LI][B]+1 Combat Strength [/B]for all Units for every [B]City-State [/B]you are [B]Suzerain [/B]of.[/LIST]'
@@ -22,34 +12,18 @@
 
 --========================================================================================================================	
 -- Hatshepsut
--- +1 culture / +1 gold from imported resources (from +1 culture)
 --========================================================================================================================
     UPDATE LocalizedText
-    SET Text = '+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold for every imported Resource. +15% [icon:YIELD_PRODUCTION] Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers.'
+    SET Text = '+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold for every imported Resource. +15% [icon:YIELD_PRODUCTION] Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers. Resources adjacent to rivers receive +1 [icon:YIELD_GOLD] Gold and [icon:YIELD_CULTURE] Culture.'
     WHERE Tag = 'LOC_LEADER_HATSHEPSUT_DESCRIPTION';   
     UPDATE LocalizedText
-    SET Text = '[LIST][LI][B]+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold [/B]for every imported [B]Resource[/B].[LI][B]+15% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Buildings [/B]and [B]Wonders [/B]in [B]Cities [/B]adjacent to [B]Navigable Rivers[/B].[/LIST]'
+    SET Text = '[LIST][LI][B]+1 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_GOLD] Gold [/B]for every imported [B]Resource[/B].[LI][B]+15% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Buildings [/B]and [B]Wonders [/B]in [B]Cities [/B]adjacent to [B]Navigable Rivers[/B]. [LI]Resources adjacent to rivers receive +1 [icon:YIELD_GOLD] Gold and [icon:YIELD_CULTURE] Culture.[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
 
 --========================================================================================================================	
--- Isabella
--- Remove bonus gold from discovering natural wonders
--- Greatly increased spawn bias towards natural wonders	
---========================================================================================================================
-    UPDATE LocalizedText
-    SET Text = 'Gain 150 [icon:YIELD_GOLD] Gold every time you discover a Natural Wonder. This is doubled if the Natural Wonder is in Distant Lands. +100% tile yields from Natural Wonders. +50% [icon:YIELD_GOLD] Gold towards purchasing Naval Units. -1 [icon:YIELD_GOLD] Gold maintenance for Naval Units.'
-    WHERE Tag = 'LOC_LEADER_ISABELLA_DESCRIPTION';   
-    UPDATE LocalizedText
-    SET Text = '[LIST][LI]Gain [B]150 [icon:YIELD_GOLD] Gold [/B]every time you discover a [B]Natural Wonder[/B]. This is [B]doubled [/B]if the [B]Natural Wonder [/B]is in [B]Distant Lands[/B].[LIST][LI][B]+100% tile yields [/B]from [B]Natural Wonders[/B].[LI][B]+50% [icon:YIELD_GOLD] Gold [/B]towards purchasing [B]Naval Units[/B].[LI][B]-1 [icon:YIELD_GOLD] Gold [/B]maintenance for [B]Naval Units[/B].[/LIST]'
-    WHERE Tag = 'LOC_TRAIT_LEADER_ISABELLA_ABILITY_DESCRIPTION';
---========================================================================================================================
---========================================================================================================================
-
---========================================================================================================================	
 -- Pachacuti 
--- +1 gold / +1 science for quarters adjacent to mountains
 --========================================================================================================================
     UPDATE LocalizedText
     SET Text = 'All Buildings receive a +1 [icon:YIELD_FOOD] Food Adjacency for Mountains. Quarters receive +1 [icon:YIELD_SCIENCE] and +1 [icon:YIELD_GOLD] if adjacent to a mountain. Specialists adjacent to Mountains pay no [icon:YIELD_HAPPINESS] Happiness maintenance.'
@@ -61,8 +35,7 @@
 --========================================================================================================================
 
 --========================================================================================================================	
--- Frederick’s  
--- Free units have +5 combat strength
+-- Frederick’s
 --========================================================================================================================
     UPDATE LocalizedText
     SET Text = 'Army Commanders start with the Merit Commendation, granting them +1 Command Radius. Gain an Infantry Unit with +5 combat strength when you construct a Science Building.'
@@ -90,7 +63,6 @@
 
 --========================================================================================================================	
 -- Napoleon, Revolutionary  
--- +5 combat strength for siege class units
 --========================================================================================================================
     UPDATE LocalizedText 
     SET Text = Text || ' +5 Combat Strength for Siege units.'
@@ -108,7 +80,6 @@
 
 -- ========================================================================================================================	
 -- Egypt
--- Add new tradition usable in exploration and modern (after playing egypt in antiquity) for +2 prod to navigable rivers
 -- ========================================================================================================================
 	INSERT OR REPLACE INTO LocalizedText
 		(Tag,				Language,	Text)
@@ -117,6 +88,98 @@
 	INSERT OR REPLACE INTO LocalizedText
 		(Tag,				Language,	Text)
 	VALUES	('LOC_NILE_LEGACY_NAME',	'en_US',	'Nile Legacy');
+
+    UPDATE LocalizedText
+    SET Text = 'Land units receive +3 combat strength in friendly territory.'
+    WHERE Tag = 'LOC_TRADITION_RICHES_OF_THE_DUAT_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+3 combat strength in friendly territory.'
+    WHERE Tag = 'LOC_ABILITY_EGYPT_COMBAT_PREVIEW';
+    
+    UPDATE LocalizedText
+    SET Text = 'Egyptian Unique Quarter. Created by constructing the Mastaba and Mortuary Temple in the same District. Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% wonder production.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_DESCRIPTION';
+    
+    UPDATE LocalizedText
+    SET Text = 'Grants 100[icon:YIELD_GOLD] Gold (on Standard Speed) when any Wonder is completed in this Settlement. +25% wonder production.'
+    WHERE Tag = 'LOC_QUARTER_NECROPOLIS_TOOLTIP';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Ibn
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = '+3 Wildcard Attribute Points.'
+    WHERE Tag = 'LOC_IBN_BATTUTA_MOD_EX_WILDCARD_ATTRIBUTE_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+3 Wildcard Attribute Points.'
+    WHERE Tag = 'LOC_IBN_BATTUTA_MOD_MO_WILDCARD_ATTRIBUTE_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = 'Gains 2 Wildcard Attribute Points after the first Civic in every Age and 1 at the start of the game. +1 Sight for all Units. Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders claimed territory.'
+    WHERE Tag = 'LOC_LEADER_IBN_BATTUTA_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI]Gains [B]3 Wildcard Attribute Points [/B]after the first [B]Civic [/B]in every Age and 1 at the start of the game.[LI][B]+1 Sight [/B]for all Units.[LI]Gain a unique [B]Endeavor [/B]called [B]Trade Maps [/B]that allows you to gradually see other Leaders [B]claimed territory[/B].[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Jose
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = 'When gaining rewards from a Narrative Event, gain an additional 20 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age. Has additional Narrative Events. +50% Celebration duration. +50% [icon:YIELD_HAPPINESS] Happiness towards Celebrations. +1 to all stats in settlements during a celebration, scaling with game age.'
+    WHERE Tag = 'LOC_LEADER_JOSE_RIZAL_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI]When gaining rewards from a [B]Narrative Event[/B], gain an additional [B]20 [icon:YIELD_CULTURE] Culture [/B]and [icon:YIELD_GOLD] [B]Gold [/B]per Age.[LI]Has additional [B]Narrative Events[/B].[LI][B]+50% Celebration [/B]duration.[LI][B]+50% [icon:YIELD_HAPPINESS] Happiness [/B]towards [B]Celebrations[/B]. [LI][B]+1[/B] to all stats in settlements during a [B]celebration[/B], [B]scaling[/B] with game age.[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_JOSE_RIZAL_ABILITY_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Simon
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = 'Gain 2 free Support on your wars. When you conquer a Settlement for the first time it can purchase 1 Constructible for free. Unrest does not prevent Purchasing.'
+    WHERE Tag = 'LOC_LEADER_BOLIVAR_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI]Gain [b]2 free Support[/b] on your wars. [LI]When you conquer a Settlement for the first time the Settlement can [b]purchase 1 Constructible for free[/b]. [LI]Unrest does not prevent Purchasing. [/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_BOLIVAR_ABILITY_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Xerxes
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = '+3 Combat Strength for Units that are attacking in neutral or enemy territory. Gain 50 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age when you capture a Settlement for the first time. +10% [icon:YIELD_GOLD] Gold in all Settlements. This is doubled in Settlements not founded by you. +1 Settlement Limit per Age.'
+    WHERE Tag = 'LOC_LEADER_XERXES_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI][B]+3 Combat Strength [/B]for Units that are [B]attacking [/B]in neutral or enemy territory.[LI]Gain [B]50 [icon:YIELD_CULTURE] Culture [/B]and [icon:YIELD_GOLD] [B]Gold [/B]per Age when you capture a Settlement for the first time.[LI][B]+10% [icon:YIELD_GOLD] Gold [/B]in all Settlements. This is [B]doubled [/B]in Settlements not founded by you.[LI][B]+1 Settlement Limit [/B]per Age.[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_XERXES_ABILITY_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Khmer
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = '+100%[icon:YIELD_FOOD] Food and[icon:YIELD_HAPPINESS] Happiness towards maintaining Specialists. +1 [icon:YIELD_PRODUCTION] Production from Specialists.'
+    WHERE Tag = 'LOC_TRADITION_KAMBU_MERA_DESCRIPTION';
+--========================================================================================================================
+
+-- ========================================================================================================================	
+-- Khmer
+-- ========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = 'Gain a unique Sanction called Continental System that reduces the Trade Route limit of the targeted Leader to all other Leaders by 1. Causes a massive Relationship penalty, and costs more to reject. +16 [icon:YIELD_GOLD] Gold per Age for every Leader you are Unfriendly or Hostile with. Can reject Endeavors for free.'
+    WHERE Tag = 'LOC_LEADER_NAPOLEON_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '[LIST][LI]Gain a unique [B]Sanction [/B]called [B]Continental System [/B]that reduces the [B]Trade Route [/B]limit of the targeted Leader to [B]all other Leaders [/B]by [B]1[/B]. Causes a massive Relationship penalty, and costs more to reject.[LI][B]+16 [icon:YIELD_GOLD] Gold [/B]per Age for every [B]Leader [/B]you are [B]Unfriendly [/B]or [B]Hostile [/B]with.[LI]Can reject [B]Endeavors [/B]for [B]free[/B].[/LIST]'
+    WHERE Tag = 'LOC_TRAIT_LEADER_NAPOLEON_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
 --========================================================================================================================	
@@ -131,34 +194,26 @@
     WHERE Tag = 'LOC_MEMENTO_BENJAMIN_FRANKLIN_BIFOCALS_FUNCTIONAL_DESCRIPTION';
 
     UPDATE LocalizedText 
-    SET Text = "Scout's Search and Lookout abilities gain +2 sight."
-    WHERE Tag = 'LOC_MEMENTO_FOUNDATION_IMAGO_MUNDI_FUNCTIONAL_DESCRIPTION';
-
-    UPDATE LocalizedText 
-    SET Text = 'If you have 3 or more Unique Buildings and Improvements, they each provide +1 [ICON_Culture] Culture and +1 [ICON_Gold] Gold.'
-    WHERE Tag = 'LOC_MEMENTO_CHALCEDONY_SEAL_FUNCTIONAL_DESCRIPTION';
-
-    UPDATE LocalizedText 
-    SET Text = '+1 Movement and Sight for Merchants and Settlers.'
-    WHERE Tag = 'LOC_MEMENTO_BATTUTA_MERCHANTS_SADDLE_FUNCTIONAL_DESCRIPTION';
-
-    UPDATE LocalizedText 
     SET Text = 'Gain 50[icon:YIELD_DIPLOMACY] Influence when you become Suzerain of a City-State.'
     WHERE Tag = 'LOC_MEMENTO_FOUNDATION_SHISA_NECKLACE_FUNCTIONAL_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
 
+--========================================================================================================================
+-- Greece
+--========================================================================================================================
+    INSERT OR REPLACE INTO LocalizedText 
+        (Language, Tag, Text) VALUES
+        ('en_US', 'LOC_ABILITY_HOPLITE_VS_CAVALRY_PREVIEW', '+3 combat str vs Cav.');
 
---========================================================================================================================	
--- Tradition changes
---========================================================================================================================
---========================================================================================================================
--- Mississippian
--- Civ Social Policy Shell-Tempered Pottery Buildings receive +.5 gold adjacency from resources (from +1 gold)
--- CHANGE MOVED HERE AS THE UNNERFED VERSION BECAME AVAILABLE AFTER ANTIQUITY TRANSITION
---========================================================================================================================
---    UPDATE LocalizedText
---    SET Text = "All Buildings receive a +.5[icon:YIELD_GOLD] Gold Adjacency for Resources."
---    WHERE Tag = 'LOC_TRADITION_SHELL_TEMPERED_POTTERY_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "Greek Unique Quarter. Created by constructing the Odeon and Parthenon in the same District. +5[icon:YIELD_GOLD] Gold on the Parthenon for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_QUARTER_ACROPOLIS_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "+5[icon:YIELD_GOLD] Gold on the Parthenon for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_QUARTER_ACROPOLIS_TOOLTIP';
+    UPDATE LocalizedText
+    SET Text = "+5[icon:YIELD_CULTURE] Culture for each City-State you are Suzerain of."
+    WHERE Tag = 'LOC_MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
