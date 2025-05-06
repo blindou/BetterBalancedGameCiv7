@@ -101,10 +101,10 @@
         Frédéric
         =======================================================================================================================-->
         <Replace Tag="LOC_LEADER_FRIEDRICH_DESCRIPTION" Language="fr_FR">
-            <Text>Les commandants d'armée commencent le jeu avec la promotion "Vertu", qui donne à l'unité +1 au rayon de la zone de commandement. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment militaire ou scientifique.</Text>
+            <Text>Les commandants d'armée commencent le jeu avec la promotion "Mérite", qui donne à l'unité +1 au rayon de la zone de commandement. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment militaire ou scientifique.</Text>
         </Replace>
         <Replace Tag="LOC_TRAIT_LEADER_FRIEDRICH_ABILITY_DESCRIPTION" Language="fr_FR">
-            <Text>[LIST][LI]Les [B]commandants d'armée [/B]commencent le jeu avec la [B]promotion "Vertu"[/B], qui donne à l'unité [B]+1 au rayon de la zone de commandement[/B].[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment scientifique[/B].[/LIST]</Text>
+            <Text>[LIST][LI]Les [B]commandants d'armée [/B]commencent le jeu avec la [B]promotion "Mérite"[/B], qui donne à l'unité [B]+1 au rayon de la zone de commandement[/B].[LI]Recevez une [B]unité d'infanterie [/B]avec [B]+5 de puissance de combat [/B]lors de la construction d'un [B]bâtiment scientifique[/B].[/LIST]</Text>
         </Replace>
         <Replace Tag="LOC_LEADER_FRIEDRICH_ALT_DESCRIPTION" Language="fr_FR">
             <Text>Recevez un chef-d'œuvre lors de la première capture d'une colonie. Recevez une unité d'infanterie avec +5 de puissance de combat lors de la construction d'un bâtiment culturel.</Text>
@@ -134,10 +134,10 @@
             <Text>+3 points d'attributs universels.</Text>
         </Replace>
         <Replace Tag="LOC_LEADER_IBN_BATTUTA_DESCRIPTION" Language="fr_FR">
-            <Text>Obtient 3 points d'attributs universels pour chaque première doctrine sociale de l'ère. +1 à la vision de toutes les unités. Obtient l'initiative unique "Cartes commerciales", qui vous révèle progressivement les territoires occupés par les autres leaders.</Text>
+            <Text>Obtient 2 points d'attributs universels pour chaque première doctrine sociale de l'ère et 1 point en début d'ère. +1 à la vision de toutes les unités. Obtient l'initiative unique "Cartes commerciales", qui vous révèle progressivement les territoires occupés par les autres leaders.</Text>
         </Replace>
         <Replace Tag="LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION" Language="fr_FR">
-            <Text>[LIST][LI]Obtient [B]3 points d'attributs universels [/B]pour chaque première [B]doctrine sociale [/B]de l'ère.[LI][B]+1 à la vision [/B]de toutes les unités.[LI]Obtient l'[B]initiative unique[/B] [B]"Cartes commerciales"[/B], qui vous révèle progressivement les [B]territoires occupés[/B] par les autres leaders.[/LIST]</Text>
+            <Text>[LIST][LI]Obtient [B]2 points d'attributs universels [/B]pour chaque première [B]doctrine sociale [/B]de l'ère, +1 en début d'ère.[LI][B]+1 à la vision [/B]de toutes les unités.[LI]Obtient l'[B]initiative unique[/B] [B]"Cartes commerciales"[/B], qui vous révèle progressivement les [B]territoires occupés[/B] par les autres leaders.[/LIST]</Text>
         </Replace>
         <!--========================================================================================================================
         José
@@ -160,12 +160,6 @@
         <!--========================================================================================================================
         Xerxes
         ===========================================================================================================================-->
-        <Replace Tag="LOC_LEADER_XERXES_ALT_DESCRIPTION" Language="fr_FR">
-            <Text>+1 à la limite de routes commerciales avec tous les leaders. Recevez +50 de [icon:YIELD_CULTURE] culture et +100 [icon:YIELD_GOLD] d'or pour chaque ère lorsque vous créez une route commerciale ou une route. +1 [icon:YIELD_GOLD] d'or par ère dans les bâtiments et améliorations uniques.</Text>
-        </Replace>
-        <Replace Tag="LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_DESCRIPTION" Language="fr_FR">
-            <Text>[LIST][LI][B]+1 à la limite de routes commerciales [/B]avec tous les leaders.[LI]Recevez [B]50 [icon:YIELD_CULTURE] de culture [/B]et [B]100 [icon:YIELD_GOLD] d'or [/B]pour chaque ère lorsque vous créez une [B]route commerciale [/B]ou une [B]route[/B].[LI][B]+1 [icon:YIELD_GOLD] d'or [/B]par ère dans les [B]bâtiments uniques [/B]et les [B]améliorations[/B].[/LIST]</Text>
-        </Replace>
         <Replace Tag="LOC_LEADER_XERXES_DESCRIPTION" Language="fr_FR">
             <Text>+3 à la puissance de combat des unités attaquant sur un territoire neutre ou ennemi. Recevez +50 de [icon:YIELD_CULTURE] culture et [icon:YIELD_GOLD] d'or pour la premiere colonie que vous capturez dans chaque ère. +10% [icon:YIELD_GOLD] d'or dans toutes les colonies. Ce bonus est doublé pour les colonies que vous n'avez pas fondés. +1 à la limite d'colonies par ère.</Text>
         </Replace>
