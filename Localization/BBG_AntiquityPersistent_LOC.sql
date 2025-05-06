@@ -182,6 +182,23 @@
     WHERE Tag = 'LOC_TRAIT_LEADER_NAPOLEON_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
+--========================================================================================================================
+-- Carthage
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = '+100% [icon:YIELD_GOLD] Gold towards purchasing Buildings on Coast or Navigable Rivers.'
+    WHERE Tag = 'LOC_TRADITION_GAULOS_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+100% [icon:YIELD_GOLD] Gold towards purchasing Naval Units. -1 [icon:YIELD_GOLD] Gold maintenance for Naval Units.'
+    WHERE Tag = 'LOC_TRADITION_QUINQUEREME_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = '+100% [icon:YIELD_GOLD] Gold from Mining Towns. +100% [icon:YIELD_FOOD] Food from Fishing or Farming Towns.'
+    WHERE Tag = 'LOC_TRADITION_SUFFETES_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
 --========================================================================================================================	
 -- Mementos
 --========================================================================================================================	
@@ -196,6 +213,10 @@
     UPDATE LocalizedText 
     SET Text = 'Gain 50[icon:YIELD_DIPLOMACY] Influence when you become Suzerain of a City-State.'
     WHERE Tag = 'LOC_MEMENTO_FOUNDATION_SHISA_NECKLACE_FUNCTIONAL_DESCRIPTION';
+
+    UPDATE LocalizedText 
+    SET Text = '+0.5 Combat Strength for all Units for every City-State you are Suzerain of.'
+    WHERE Tag = 'LOC_MEMENTO_TECUMSEH_WARCLUB_FUNCTIONAL_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================
 

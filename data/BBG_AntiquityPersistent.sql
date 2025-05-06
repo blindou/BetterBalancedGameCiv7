@@ -185,6 +185,13 @@
 	WHERE ModifierId IN (
 		'MEMENTO_FOUNDATION_SHISA_NECKLACE_MODIFIER'
 	) and name = 'Amount';
+
+	-- Shisa Necklace down to 50 influence (From 100)
+	UPDATE ModifierArguments 
+	SET Value = 0.5
+	WHERE ModifierId IN (
+		'MEMENTO_TECUMSEH_WARCLUB_MODIFIER'
+	) and name = 'Amount';
 --========================================================================================================================
 --========================================================================================================================
 
@@ -194,6 +201,29 @@
     UPDATE Constructible_YieldChanges
 	SET	YieldChange = 3
 	WHERE ConstructibleType = 'IMPROVEMENT_PAIRIDAEZA' and YieldType = 'YIELD_GOLD';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Carthage
+--========================================================================================================================
+	UPDATE ModifierArguments
+	SET	Value = 100
+	WHERE ModifierId = 'GAULOS_MOD_PURCHASE_RATE_BUILDINGS' and name = 'Percent';
+
+	UPDATE ModifierArguments
+	SET	Value = 100
+	WHERE ModifierId = 'QUINQUEREME_MOD_PURCHASE_RATE_UNITS' and name = 'Percent';
+	
+	UPDATE ModifierArguments
+	SET	Value = 100
+	WHERE ModifierId = 'SUFFETES_FARM_TOWNS_FOOD' and name = 'Percent';
+	UPDATE ModifierArguments
+	SET	Value = 100
+	WHERE ModifierId = 'SUFFETES_FISHING_TOWNS_FOOD' and name = 'Percent';
+	UPDATE ModifierArguments
+	SET	Value = 100
+	WHERE ModifierId = 'SUFFETES_MINING_TOWNS_GOLD' and name = 'Percent';
 --========================================================================================================================
 --========================================================================================================================
 
