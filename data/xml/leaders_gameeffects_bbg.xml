@@ -59,4 +59,30 @@
 		<Argument name="Amount" type="ScaleByGameAge" extra="100">1</Argument>
 		<Argument name="Tooltip">LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_NAME</Argument>
 	</Modifier>
+	<Modifier id="TRUNG_SCIENCE_PER_COMMANDER_LEVEL_BBG" collection="COLLECTION_PLAYER_UNITS" effect="EFFECT_PLAYER_ADJUST_YIELD_PER_UNIT_LEVEL">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_UNIT_TAG_MATCHES">
+				<Argument name="Tag">UNIT_CLASS_ARMY_COMMANDER</Argument>
+			</Requirement>
+		</SubjectRequirements>
+		<Argument name="YieldType">YIELD_SCIENCE</Argument>
+		<Argument name="Amount" type="ScaleByGameAge" extra="100">1</Argument>
+	</Modifier>
+	<Modifier id="TRUNG_VEGETATED_COMBAT_STRENGTH_BBG" collection="COLLECTION_PLAYER_COMBAT" effect="EFFECT_ADJUST_UNIT_STRENGTH_MODIFIER">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES">
+				<Argument name="FeatureClassType">FEATURE_CLASS_VEGETATED</Argument>
+			</Requirement>
+		</SubjectRequirements>
+		<Argument name="Amount">3</Argument>
+		<String context="Preview">LOC_VEGETATED_COMBAT_STRENGTH_BBG</String>
+	</Modifier>
+	<Modifier id="SIMON_CAV_UNIT_MOVEMENT_BBG" collection="COLLECTION_PLAYER_UNITS" effect="EFFECT_UNIT_ADJUST_MOVEMENT">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_UNIT_TAG_MATCHES">
+				<Argument name="Tag">UNIT_CLASS_CAVALRY</Argument>
+			</Requirement>
+		</SubjectRequirements>
+		<Argument name="Amount">1</Argument>
+	</Modifier>
 </GameEffects> 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameEffects xmlns="GameEffects">
+	<Modifier id="MOD_NEW_WORLD_RICHES_FOREIGN_CITIES_PRODUCTION_FOOD_BBG" collection="COLLECTION_PLAYER_CITIES" effect="EFFECT_CITY_ADJUST_YIELD">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_CITY_IS_DISTANT_LANDS"/>
+		</SubjectRequirements>
+		<Argument name="Percent">10</Argument>
+		<Argument name="YieldType">YIELD_PRODUCTION, YIELD_FOOD, YIELD_GOLD</Argument>
+		<Argument name="Tooltip">LOC_CIVIC_COUNCIL_OF_THE_INDIES_NAME</Argument>
+		<String context="Description">LOC_MOD_NEW_WORLD_RICHES_FOREIGN_CITIES_PRODUCTION_FOOD_DESCRIPTION</String>
+	</Modifier>
+	<Modifier id="MOD_COUNCIL_OF_THE_INDIES_TREASURE_FLEET_MOVEMENT_BBG" collection="COLLECTION_PLAYER_UNITS" effect="EFFECT_UNIT_ADJUST_MOVEMENT">
+		<SubjectRequirements>
+			<Requirement type="REQUIREMENT_UNIT_TAG_MATCHES">
+				<Argument name="Tag">UNIT_CLASS_NAVAL, UNIT_CLASS_NAVAL_TREASURE</Argument>
+			</Requirement>
+		</SubjectRequirements>
+		<Argument name="Amount">1</Argument>
+		<String context="Description">LOC_MOD_COUNCIL_OF_THE_INDIES_TREASURE_FLEET_MOVEMENT_DESCRIPTION</String>
+	</Modifier>
+	<Modifier id="MOD_MANA_CULTURE_DISASTERS_BBG" collection="COLLECTION_OWNER" effect="EFFECT_PLAYER_ADJUST_YIELD_FROM_DISTATERS">
+		<Argument name="YieldType">YIELD_CULTURE, YIELD_PRODUCTION</Argument>
+		<Argument name="Amount">4</Argument>
+		<String context="Description">LOC_MOD_MANA_CULTURE_DISASTERS_DESCRIPTION</String>
+	</Modifier>
+	<Modifier id="MOD_HI_KOI_RIVER_COMBAT_ATTACH_BBG" collection="COLLECTION_UNIT_COMBAT" effect="EFFECT_ADJUST_UNIT_STRENGTH_MODIFIER">
+		<OwnerRequirements>
+			<Requirement type="REQUIREMENTSET_TEST_ANY">
+				<Requirement type="REQUIREMENT_PLOT_IS_RIVER">
+					<Argument name="Navigable">true</Argument>
+				</Requirement>
+				<Requirement type="REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES">
+					<Argument name="TerrainType">TERRAIN_COAST</Argument>
+				</Requirement>
+			</Requirement>
+		</OwnerRequirements>
+		<Argument name="Amount">5</Argument>
+		<String context="Preview">LOC_MOD_HI_KOI_RIVER_COMBAT_PREVIEW</String>
+	</Modifier>
+</GameEffects>

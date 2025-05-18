@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<ProgressionTreeNodeUnlocks>
+		<Row ProgressionTreeNodeType="NODE_CIVIC_EX_HAWAII_MANA" TargetKind="KIND_MODIFIER" TargetType="MOD_MANA_CULTURE_DISASTERS_BBG" UnlockDepth="1"/>
+		<Row ProgressionTreeNodeType="NODE_CIVIC_EX_SPAIN_NEW_WORLD_RICHES" TargetKind="KIND_MODIFIER" TargetType="MOD_NEW_WORLD_RICHES_FOREIGN_CITIES_PRODUCTION_FOOD_BBG" UnlockDepth="1"/>
+        <Row ProgressionTreeNodeType="NODE_CIVIC_EX_SPAIN_COUNCIL_OF_THE_INDIES" TargetKind="KIND_MODIFIER" TargetType="MOD_COUNCIL_OF_THE_INDIES_TREASURE_FLEET_MOVEMENT_BBG" UnlockDepth="2"/>
+	</ProgressionTreeNodeUnlocks>
+</Database>

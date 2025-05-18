@@ -142,11 +142,11 @@
 -- Simon
 -- ========================================================================================================================
     UPDATE LocalizedText
-    SET Text = 'Gain 2 free Support on your wars. When you conquer a Settlement for the first time it can purchase 1 Constructible for free. Unrest does not prevent Purchasing.'
+    SET Text = 'Gain 2 free Support on your wars. When you conquer a Settlement for the first time it can purchase 1 Constructible for free. Unrest does not prevent Purchasing. Cavalry Units receive +1 movement.'
     WHERE Tag = 'LOC_LEADER_BOLIVAR_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = '[LIST][LI]Gain [b]2 free Support[/b] on your wars. [LI]When you conquer a Settlement for the first time the Settlement can [b]purchase 1 Constructible for free[/b]. [LI]Unrest does not prevent Purchasing. [/LIST]'
+    SET Text = '[LIST][LI]Gain [b]2 free Support[/b] on your wars. [LI]When you conquer a Settlement for the first time the Settlement can [b]purchase 1 Constructible for free[/b]. [LI]Unrest does not prevent Purchasing. [LI]Cavalry Units receive +1 movement.[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_BOLIVAR_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
@@ -236,5 +236,124 @@
     UPDATE LocalizedText
     SET Text = "+5[icon:YIELD_CULTURE] Culture for each City-State you are Suzerain of."
     WHERE Tag = 'LOC_MOD_SYMMACHIA_CULTURE_PER_FRIENDLY_INDEPENDENT_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Abasid
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "+25% Production towards constructing Buildings in Cities with at least 8 Urban Population."
+    WHERE Tag = 'LOC_MOD_ROUND_CITY_BUILDING_PRODUCTION_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Majaphit
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "+33%[icon:YIELD_PRODUCTION] Production towards Overbuilding."
+    WHERE Tag = 'LOC_MOD_WAYANG_OVERBUILD_PRODUCTION_DESCRIPTION';    
+    UPDATE LocalizedText
+    SET Text = "+100%[icon:YIELD_FOOD] Food towards maintaining Specialists."
+    WHERE Tag = 'LOC_TRADITION_NEGARAKERTAGAMA_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Spain
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "+25% [icon:YIELD_GOLD] Gold towards converting a Town to a City, or +50% in Distant Lands."
+    WHERE Tag = 'LOC_CIVILIZATION_SPAIN_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "[LIST][LI][B]+25% [icon:YIELD_GOLD] Gold [/B]towards [B]converting [/B]a Town to a City, or [B]+50% [/B]in [B]Distant Lands[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]El Escorial[/B].[/LIST]"
+    WHERE Tag = 'LOC_TRAIT_SPAIN_ABILITY_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "+10%[icon:YIELD_FOOD] Food, [icon:YIELD_PRODUCTION] Production, and [icon:YIELD_GOLD] Gold in Settlements in Distant Lands."
+    WHERE Tag = 'LOC_MOD_NEW_WORLD_RICHES_FOREIGN_CITIES_PRODUCTION_FOOD_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "+1 movement to all naval units including treasure fleets."
+    WHERE Tag = 'LOC_MOD_COUNCIL_OF_THE_INDIES_TREASURE_FLEET_MOVEMENT_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "Adjacent Units receive +4 Combat Strength against Cavalry Units (bonus is only applied once)."
+    WHERE Tag = 'LOC_ABILITY_TERCIO_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Hawaii
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "Gain 25 [icon:YIELD_CULTURE] Culture each time a Settlement expands to Marine Terrain. +1[icon:YIELD_PRODUCTION] Production and +1[icon:YIELD_HAPPINESS] Happiness on [B]Fishing Boats."
+    WHERE Tag = 'LOC_CIVILIZATION_HAWAII_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "[LIST][LI]Gain [B]25 [icon:YIELD_CULTURE] Culture [/B]each time a Settlement expands to [B]Marine Terrain[/B].[LI][B]+1[icon:YIELD_PRODUCTION] Production and +1[icon:YIELD_HAPPINESS] Happiness[/B] on [B]Fishing Boats.[/B][LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Hale o Keawe[/B].[/LIST]"
+    WHERE Tag = 'LOC_TRAIT_HAWAII_ABILITY_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = "Adjacent Farms and Fishing Boats receive +1[icon:YIELD_CULTURE] Culture. Hawaiian Unique Improvement. Ageless. Does not remove Warehouse bonuses on a tile. Must be placed on an existing Improvement on Grassland or Tropical."
+    WHERE Tag = 'LOC_IMPROVEMENT_LO_I_KALO_TOOLTIP';
+    UPDATE LocalizedText
+    SET Text = "+3[icon:YIELD_FOOD] Food and +2[icon:YIELD_PRODUCTION] Production. Adjacent Farms and Fishing Boats receive +1[icon:YIELD_CULTURE] Culture. Hawaiian Unique Improvement. Ageless. Does not remove Warehouse bonuses on a tile. Must be placed on an existing Improvement on Grassland or Tropical."
+    WHERE Tag = 'LOC_IMPROVEMENT_LO_I_KALO_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = "+4[icon:YIELD_PRODUCTION] and +4[icon:YIELD_CULTURE] Culture for every time a Storm, Flood, or Volcanic Eruption has provided Fertility this Age."
+    WHERE Tag = 'LOC_MOD_MANA_CULTURE_DISASTERS_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Inca
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "+6[icon:YIELD_FOOD] Food. Incan Unique Improvement. Ageless. Does not remove Warehouse bonuses on a tile. Must be placed on an existing Improvement adjacent to a Mountain."
+    WHERE Tag = 'LOC_IMPROVEMENT_TERRACE_FARM_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "Incan Unique Improvement. Ageless. Does not remove Warehouse bonuses on a tile. Must be placed on an existing Improvement adjacent to a Mountain."
+    WHERE Tag = 'LOC_IMPROVEMENT_TERRACE_FARM_TOOLTIP';
+
+    UPDATE LocalizedText
+    SET Text = "Can work Mountain Terrain. +3[icon:YIELD_PRODUCTION] Production on Mountain Terrain."
+    WHERE Tag = 'LOC_CIVILIZATION_INCA_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "[LIST][LI]Can work [B]Mountain Terrain[/B].[LI][B]+3 [icon:YIELD_PRODUCTION] Production [/B]on [B]Mountain Terrain[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Machu Pikchu[/B].[/LIST]"
+    WHERE Tag = 'LOC_TRAIT_INCA_ABILITY_DESCRIPTION';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Trung
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "Gain 3 free Levels on your first Army Commander. +20% Commander experience. +1 science per age per army commander level. +3 combat strength in vegetated terrain."
+    WHERE Tag = 'LOC_LEADER_TRUNG_TRAC_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "[LIST][LI]Gain [B]3 free Levels [/B]on your first [B]Army Commander[/B].[LI][B]+20% [/B]Commander experience.[LI][B]+1 science[/B] per age per army commander level. [LI][B]+3 combat strength[/B] in vegetated terrain.[/LIST]"
+    WHERE Tag = 'LOC_TRAIT_LEADER_TRUNG_TRAC_ABILITY_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = "+3 Combat Strength in vegetated terrain"
+    WHERE Tag = 'LOC_VEGETATED_COMBAT_STRENGTH_BBG';
+--========================================================================================================================
+--========================================================================================================================
+
+--========================================================================================================================
+-- Songhai
+--========================================================================================================================
+    UPDATE LocalizedText
+    SET Text = "+2 Resource Capacity in Cities and your Trade Ships cannot be Plundered on Navigable Rivers."
+    WHERE Tag = 'LOC_CIVILIZATION_SONGHAI_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "[LIST][LI][B]+2 Resource Capacity[/B] in [B]Cities[/B] and your [B]Trade Ships [/B]cannot be [B]Plundered[/B] on [B]Navigable Rivers[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing the [B]Tomb of Askia[/B].[/LIST]"
+    WHERE Tag = 'LOC_TRAIT_SONGHAI_ABILITY_DESCRIPTION';
+
+    UPDATE LocalizedText
+    SET Text = "Combat Units receive +5 Combat Strength on Navigable Rivers or Coastal tiles."
+    WHERE Tag = 'LOC_MOD_HI_KOI_RIVER_COMBAT_DESCRIPTION';
+    UPDATE LocalizedText
+    SET Text = "+2 Movement to all Units on Navigable Rivers and Coast."
+    WHERE Tag = 'LOC_TRADITION_ISA_DESCRIPTION';
 --========================================================================================================================
 --========================================================================================================================

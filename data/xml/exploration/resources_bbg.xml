@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<GameModifiers>
+		<Row ModifierId="MOD_PEARLS_CAPITAL_SCIENCE"/>
+		<Row ModifierId="MOD_PEARLS_CITY_SCIENCE"/>
+		<Row ModifierId="MOD_FISH_CITY_FLAT_PRODUCTION"/>
+		<Row ModifierId="MOD_RUBIES_HOMELAND_TOWN_GOLD_BBG"/>
+		<Row ModifierId="MOD_RUBIES_DISTANT_LAND_TOWN_GOLD_BBG"/>
+		<Row ModifierId="MOD_COCOA_HOMELAND_TOWN_HAPPINESS_BBG"/>
+		<Row ModifierId="MOD_COCOA_DISTANT_LAND_TOWN_HAPPINESS_BBG"/>
+	</GameModifiers>
+	<ModifierMetadatas>
+		<Row ModifierId="MOD_PEARLS_CAPITAL_SCIENCE" FieldName="ResourceType" String="RESOURCE_PEARLS"/>
+		<Row ModifierId="MOD_PEARLS_CITY_SCIENCE" FieldName="ResourceType" String="RESOURCE_PEARLS"/>
+		<Row ModifierId="MOD_FISH_CITY_FLAT_PRODUCTION" FieldName="ResourceType" String="RESOURCE_FISH"/>
+		<Row ModifierId="MOD_RUBIES_HOMELAND_TOWN_GOLD_BBG" FieldName="ResourceType" String="RESOURCE_RUBIES"/>
+		<Row ModifierId="MOD_RUBIES_DISTANT_LAND_TOWN_GOLD_BBG" FieldName="ResourceType" String="RESOURCE_RUBIES"/>
+		<Row ModifierId="MOD_COCOA_HOMELAND_TOWN_HAPPINESS_BBG" FieldName="ResourceType" String="RESOURCE_COCOA"/>
+		<Row ModifierId="MOD_COCOA_DISTANT_LAND_TOWN_HAPPINESS_BBG" FieldName="ResourceType" String="RESOURCE_COCOA"/>
+	</ModifierMetadatas>
+</Database>

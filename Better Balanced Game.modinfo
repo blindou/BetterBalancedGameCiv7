@@ -80,6 +80,8 @@
 					<Item>data/xml/antiquity/civilizations_bbg.xml</Item>
 					<Item>data/xml/antiquity/units_bbg.xml</Item>
 					<Item>data/xml/antiquity/units_gameeffects_bbg.xml</Item>
+					<Item>data/xml/antiquity/resources_bbg.xml</Item>
+					<Item>data/xml/antiquity/resources_gameeffects_bbg.xml</Item>
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>
@@ -107,10 +109,17 @@
 			</Properties>
 			<Actions>
 				<UpdateText>
-
+					<Item>Localization/BBG_Exploration_LOC.sql</Item>
 				</UpdateText>
 				<UpdateDatabase>
 					<Item>data/BBG_Exploration.sql</Item>
+					<Item>data/xml/exploration/civilization_gameeffects_bbg.xml</Item>
+					<Item>data/xml/exploration/civilizations_bbg.xml</Item>
+					<Item>data/xml/exploration/constructibles_bbg.xml</Item>
+					<Item>data/xml/exploration/progression_tree_cultue_gameeffects_bbg.xml</Item>
+					<Item>data/xml/exploration/progression_tree_cultue.xml</Item>
+					<Item>data/xml/exploration/resources_bbg.xml</Item>
+					<Item>data/xml/exploration/resources_gameeffects_bbg.xml</Item>
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>
@@ -121,10 +130,12 @@
 			</Properties>
 			<Actions>
 				<UpdateText>
-
+					<Item>Localization/BBG_Modern_LOC.sql</Item>
 				</UpdateText>
 				<UpdateDatabase>
 					<Item>data/BBG_Modern.sql</Item>
+					<Item>data/xml/modern/resources_bbg.xml</Item>
+					<Item>data/xml/modern/resources_gameeffects_bbg.xml</Item>
 				</UpdateDatabase>
 			</Actions>
 		</ActionGroup>
