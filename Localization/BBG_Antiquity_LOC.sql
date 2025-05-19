@@ -60,7 +60,7 @@
     SET Text = "+2[icon:YIELD_HAPPINESS] Happiness and +1[icon:YIELD_SCIENCE] Science to Capital, +4[icon:YIELD_HAPPINESS] Happiness and +2[icon:YIELD_SCIENCE] Science to any other City"
     WHERE Tag = 'LOC_ANT_RESOURCE_PEARLS_TOOLTIP';
     UPDATE LocalizedText
-    SET Text = "+3[icon:YIELD_FOOD] Food"
+    SET Text = "+3[icon:YIELD_FOOD] Food and +1[icon:YIELD_PRODUCTION] Production"
     WHERE Tag = 'LOC_ANT_RESOURCE_FISH_TOOLTIP';
 --========================================================================================================================
 --========================================================================================================================

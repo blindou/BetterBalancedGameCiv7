@@ -81,7 +81,7 @@
 	where ModifierId = 'TRAIT_MOD_NAVIGABLE_RIVER_RESOURCE_CAP' and TraitType = 'TRAIT_SONGHAI_ABILITY';
 	Update ModifierArguments
 	set value = 'MOD_HI_KOI_RIVER_COMBAT_ATTACH_BBG'
-	where ModifierId = 'MOD_HI_KOI_RIVER_COMBAT' and name = 'ModifierId'
+	where ModifierId = 'MOD_HI_KOI_RIVER_COMBAT' and name = 'ModifierId';
 --========================================================================================================================
 --========================================================================================================================
 
@@ -104,8 +104,6 @@
 	where ModifierId = 'MOD_COCOA_DISTANT_LAND_TOWN_HAPPINESS' and String = 'RESOURCE_COCOA';
 --========================================================================================================================
 
-
-
 --========================================================================================================================	
 -- Legacy Paths
 --========================================================================================================================	
@@ -115,5 +113,10 @@
 	UPDATE AgeProgressionMilestones
 	SET	RequiredPathPoints = 20
 	WHERE AgeProgressionMilestoneType = 'EXPLORATION_ECONOMIC_MILESTONE_3' and LegacyPathType = 'LEGACY_PATH_EXPLORATION_ECONOMIC';
---========================================================================================================================
 
+	delete from ProgressionTreeNodeUnlocks
+	where ProgressionTreeNodeType = 'NODE_TECH_EX_SHIPBUILDING' and TargetType = 'MOD_TECH_EX_SPAWN_TREASURE_FLEETS_DUMMY' and UnlockDepth = 1;
+	UPDATE RequirementArguments
+	SET	value = 'NODE_TECH_EX_FEUDALISM'
+	WHERE name = 'ProgressionTreeNodeType' and RequirementId = 'TRAIT_TREASURE_TECH_PREREQ_SUBJECT_REQUIREMENTS_1' and value = 'NODE_TECH_EX_SHIPBUILDING';
+--========================================================================================================================
