@@ -101,6 +101,10 @@
 --========================================================================================================================
 -- 	delete from TraitModifiers
 -- 	WHERE ModifierId = 'IBN_BATTUTA_MOD_WILDCARD_ATTRIBUTE' and TraitType = 'TRAIT_LEADER_IBN_BATTUTA_ABILITY';
+    INSERT INTO LeaderTraits (LeaderType, TraitType)
+    VALUES ('LEADER_IBN_BATTUTA', 'TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC');
+
+
 --========================================================================================================================
 
 --========================================================================================================================	
