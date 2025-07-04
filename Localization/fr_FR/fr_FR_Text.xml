@@ -128,16 +128,16 @@
 Ибн
 ===========================================================================================================================-->
         <Replace Tag="LOC_IBN_BATTUTA_MOD_EX_WILDCARD_ATTRIBUTE_DESCRIPTION" Language="fr_FR">
-            <Text>+3 points d'attributs universels.</Text>
+            <Text>+2 points d'attributs universels.</Text>
         </Replace>
         <Replace Tag="LOC_IBN_BATTUTA_MOD_MO_WILDCARD_ATTRIBUTE_DESCRIPTION" Language="fr_FR">
-            <Text>+3 points d'attributs universels.</Text>
+            <Text>+2 points d'attributs universels.</Text>
         </Replace>
         <Replace Tag="LOC_LEADER_IBN_BATTUTA_DESCRIPTION" Language="fr_FR">
-            <Text>Obtient 2 points d'attributs universels pour chaque première doctrine sociale de l'ère et 1 point en début d'ère. +1 à la vision de toutes les unités. Obtient l'initiative unique "Cartes commerciales", qui vous révèle progressivement les territoires occupés par les autres leaders.</Text>
+            <Text>Obtient 2 points d'attributs universels pour chaque première doctrine sociale de l'ère. +1 à la vision de toutes les unités. Obtient l'initiative unique "Cartes commerciales", qui vous révèle progressivement les territoires occupés par les autres leaders.</Text>
         </Replace>
         <Replace Tag="LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION" Language="fr_FR">
-            <Text>[LIST][LI]Obtient [B]2 points d'attributs universels [/B]pour chaque première [B]doctrine sociale [/B]de l'ère, +1 en début d'ère.[LI][B]+1 à la vision [/B]de toutes les unités.[LI]Obtient l'[B]initiative unique[/B] [B]"Cartes commerciales"[/B], qui vous révèle progressivement les [B]territoires occupés[/B] par les autres leaders.[/LIST]</Text>
+            <Text>[LIST][LI]Obtient [B]2 points d'attributs universels [/B]pour chaque première [B]doctrine sociale [/B]de l'ère.[LI][B]+1 à la vision [/B]de toutes les unités.[LI]Obtient l'[B]initiative unique[/B] [B]"Cartes commerciales"[/B], qui vous révèle progressivement les [B]territoires occupés[/B] par les autres leaders.[/LIST]</Text>
         </Replace>
         <!--========================================================================================================================
         José

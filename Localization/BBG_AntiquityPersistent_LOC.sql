@@ -110,19 +110,19 @@
 -- Ibn
 -- ========================================================================================================================
     UPDATE LocalizedText
-    SET Text = '+3 Wildcard Attribute Points.'
+    SET Text = '+2 Wildcard Attribute Points.'
     WHERE Tag = 'LOC_IBN_BATTUTA_MOD_EX_WILDCARD_ATTRIBUTE_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = '+3 Wildcard Attribute Points.'
+    SET Text = '+2 Wildcard Attribute Points.'
     WHERE Tag = 'LOC_IBN_BATTUTA_MOD_MO_WILDCARD_ATTRIBUTE_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = 'Gains 2 Wildcard Attribute Points after the first Civic in every Age and 1 at the start of the game. +1 Sight for all Units. Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders claimed territory.'
+    SET Text = 'Gains 2 Wildcard Attribute Points after the first Civic in every Age. +1 Sight for all Units. Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders claimed territory.'
     WHERE Tag = 'LOC_LEADER_IBN_BATTUTA_DESCRIPTION';
 
     UPDATE LocalizedText
-    SET Text = '[LIST][LI]Gains [B]3 Wildcard Attribute Points [/B]after the first [B]Civic [/B]in every Age and 1 at the start of the game.[LI][B]+1 Sight [/B]for all Units.[LI]Gain a unique [B]Endeavor [/B]called [B]Trade Maps [/B]that allows you to gradually see other Leaders [B]claimed territory[/B].[/LIST]'
+    SET Text = '[LIST][LI]Gains [B]2 Wildcard Attribute Points [/B]after the first [B]Civic [/B]in every Age [LI][B]+1 Sight [/B]for all Units.[LI]Gain a unique [B]Endeavor [/B]called [B]Trade Maps [/B]that allows you to gradually see other Leaders [B]claimed territory[/B].[/LIST]'
     WHERE Tag = 'LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION';
 --========================================================================================================================
 
